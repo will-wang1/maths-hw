@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{booktabs}
+\title{Lesson 2 Challenge - Calculus}
+\author{William Wang}
+\date{August 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+We have \(g(x) = \lfloor x \rfloor\), then 
+\[\lim_{x\to\frac{3}{2}} g(x) = 1\]
+since no matter which way we approach \(\frac{3}{2}\) from it will always be less than \(2\) and greater than \(1\) meaning the floor function will return the same result. However when we have 
+\[\lim_{x\to2}g(x)\]
+If we approach \(x \to 2^-\) it will be less than $2$, hence the floor will return 1 but if we approach \(x \to 2^+\), then it will be greater than 2, hence the floor will return 2. Therefore, since there are $2$ values, it is undefined for \(x \to 2\). 
+\section{}
+We can construct a table of values. 
+\begin{table}[ht]
+\centering
+\begin{tabular}{cc}
+\toprule
+$x$ & $g \circ f(x)$\\
+\midrule
+$1.51$    & $9$ \\
+$1.501$   & $9$ \\
+$1.5001$  & $9$ \\
+$1.50001$ & $9$ \\
+
+$1.49$& $8$ \\
+$1.499$   & $8$ \\
+$1.4999$    & $8$ \\
+$1.49999$     & $8$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+We can see that depending on which way you approach \(\frac{3}{2}\), the value of \(g\circ f(x)\) changes, hence the limit is undefined. 
+\section{}
+Using a table of values,
+\begin{table}[ht]
+\centering
+\begin{tabular}{cc}
+\toprule
+$x$ & $f \circ g(x)$\\
+\midrule
+$1.51$    & $4$ \\
+$1.501$   & $4$ \\
+$1.5001$  & $4$ \\
+$1.50001$ & $4$ \\
+
+$1.49$& $4$ \\
+$1.499$   & $4$ \\
+$1.4999$    & $4$ \\
+$1.49999$     & $4$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+From the table of values we can see that 
+\[\lim_{x\to \frac{3}{2}} f\circ g(x) = 4\] Hence the limit exists. 
+
+\section{}
+They are not enough because the order in which you do them matters. The output of one of the function is the input of the second, meaning it could be a value where the limit if undefined for that part. 
+
+\section{}
+If we have 
+\[\lim_{x\to c} f (g(x))\]
+then \(\lim_{x\to c} g(x)\) has to be defined and we also need a function \(f(x)\) such that there exists a limit at every point on \(f(x)\). Then we can pull the limit into the inner function such that 
+\[\lim_{x\to c} f(g(x)) = f(\lim_{x\to c}g(x))\]
+
+\end{document}

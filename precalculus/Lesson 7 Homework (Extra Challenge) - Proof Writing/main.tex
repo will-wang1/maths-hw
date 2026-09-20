@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{float}
+\usepackage{amsmath}
+\title{Lesson 7 Homework (Extra Challenge) - Proof Writing}
+\author{William Wang}
+\date{October 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+We have
+\[\arccos(\sin \frac{6\pi}{7}) = \theta \implies \sin(\frac{6\pi}{7}) = \cos \theta\]
+Since we know that the graph of $\sin$ is just a transformation of $\cos$, we can actually express this equation under using the same trigonometric function. We have 
+\[\sin(x+\frac{\pi}{2}) = \cos x\]
+Hence we have 
+\[\cos \theta = \sin(\theta + \frac{\pi}{2}) = \sin(\frac{6\pi}{7})\]
+So we have 
+\[\theta + \frac{\pi}{2} = \frac{6\pi}{7} + 2a\pi\]
+Where \(a\) is a constant for the cycle of sine. However, the solution is restricted by the range of \(\arccos x \in [0, \pi] \). Hence the only solution occurs when $a = 0$. So
+\[\theta +\frac{\pi}{2} = \frac{6\pi}{7} \implies \theta = \frac{5\pi}{14}\]
+Which is in the range of $\arccos$. 
+
+\end{document}

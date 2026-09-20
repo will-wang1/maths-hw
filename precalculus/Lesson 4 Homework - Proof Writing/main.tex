@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\title{Lesson 4 Homework - Proof Writing}
+\author{William Wang}
+\date{September 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+We have \(\frac{A}{B+Ce^{-kt}} = D\), we can first get rid of the fraction. 
+\[\frac{A}{B+Ce^{-kt}} = D \implies A = DB+DCe^{-kt}\]
+\[\implies \frac{A-DB}{DC} = e^{-kt} \implies \ln(\frac{A-DB}{DC}) = -kt\]
+\[t = -\frac{1}{k}\ln(\frac{A-DB}{DC})\]
+\section{}
+\[a+b\ln c = d \implies b\ln c = d-a \implies \ln c = \frac{d-a}{b}\]
+\[\implies c = e^{\frac{d-a}{b}}\]
+\section{}
+Since we know the half time, remaining mass and time decayed, we have
+\[4.2 = N_0(\frac{1}{2})^{12/4.3}\]
+\[N_0 = 4.2/(\frac{1}{2})^{12/4.3} \approx 29.06\]
+\section{}
+Let $x$ be the initial amount and $t_{1/2}$ be the half life, then we have 
+\[12.2 = x(\frac{1}{2})^{63/t_{1/2}} \text{ and } 4.1 = x(\frac{1}{2})^{107/t_{1/2}}\]
+
+By dividing these two equations, we get
+\[\frac{4.1}{12.2} = (\frac{1}{2})^{107/t_{1/2} - 63/t_{1/2}}\]
+\[= (\frac{1}{2})^{44/t_{1/2}}\]
+By taking the natural logarithm base of each side, we have
+\[\ln \frac{4.1}{12.2} = \ln(\frac{1}{2})^{44/t_{1/2}} = \frac{44}{t_{1/2}}\ln \frac{1}{2}\]
+\[\implies t_{1/2} = \frac{44\ln(0.5)}{\ln(4.1/12.2)} \approx 27.97\]
+Hence, we have \(x = \frac{12.2}{(1/2)^{63/27.97}} \approx 58.13 \). 
+
+
+\end{document}

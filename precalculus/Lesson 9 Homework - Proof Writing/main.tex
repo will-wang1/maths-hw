@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb} 
+\title{Lesson 9 Homework - Proof Writing}
+\author{William Wang}
+\date{October 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+\subsection{}
+Proof:
+\[ \text{LHS: }\sin(\alpha - \beta)\sin(\alpha + \beta) = \sin^2 \alpha - \sin^2 \beta \]
+ \[\sin(\alpha - \beta)\sin(\alpha + \beta) \]
+\[=(\sin\alpha\cos\beta - \cos\alpha\sin\beta)(\sin\alpha\cos\beta + \cos\alpha\sin\beta) \]
+\[= (\sin\alpha\cos\beta)^2 - (\cos\alpha\sin\beta)^2 \]
+\[= \sin^2\alpha\cos^2\beta - \cos^2\alpha\sin^2\beta \]
+\[= \sin^2\alpha\cos^2\beta - (1 - \sin^2\alpha)\sin^2\beta \]
+\[= \sin^2\alpha\cos^2\beta - \sin^2\beta + \sin^2\alpha\sin^2\beta \]
+\[= \sin^2\alpha(\cos^2\beta + \sin^2\beta) - \sin^2\beta \]
+\[= \text{RHS}=\sin^2\alpha - \sin^2\beta\]
+
+\subsection{}
+Skipped
+\section{}
+\subsection{}
+\[
+\begin{aligned}
+\tan x + \cot x 
+&= \frac{\sin x}{\cos x} + \frac{\cos x}{\sin x} \\[6pt]
+&= \frac{\sin^2 x + \cos^2 x}{\sin x \cos x} \\[6pt]
+&= \frac{1}{\sin x \cos x}. \\[10pt]
+\text{Since } \sin 2x &= 2 \sin x \cos x, \text{ we have } \sin x \cos x = \frac{1}{2} \sin 2x. \\[6pt]
+\therefore \quad \frac{1}{\sin x \cos x} 
+&= \frac{1}{\tfrac{1}{2} \sin 2x} \\[6pt]
+&= \frac{2}{\sin 2x} \\[6pt]
+&= 2 \csc 2x.
+\end{aligned}
+\]
+
+\[
+\boxed{\tan x + \cot x = 2 \csc 2x}
+\]
+\subsection{}
+Skipped.
+\end{document}

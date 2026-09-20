@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\title{Lesson 6 (Extra Challenge) - Proof Writing}
+\author{William Wang}
+\date{September 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+We have 
+\[\sin x = \frac{x^2}{625\pi^2}\]
+We know what the graph of the sine function looks like. The graph of the left side should be a massive upwards-opening parabola since it is just a quadratic with $\frac{1}{625\pi^2}$ as the coefficient. The vertex of the parabola is \((0,0)\) so we know that we just want to solve the equation
+\[\frac{x^2}{625\pi^2} \le 1\]
+since the maximum value of $\sin x$ is 1. 
+\[\frac{x^2}{625\pi^2} \le 1 \implies x^2 \le 625\pi^2 \implies x^2-625\pi^2 \le 0 \implies (x-25\pi)(x+25\pi) \le 0\]
+Hence
+\[x \in [-25\pi, 25\pi]\]
+The amount of peaks in this interval is 
+\[\text{From } [-25\pi, 0) = -25\pi/2\pi \text{(since the cycle of sine is } 2\pi) = 12\]
+\[\text{From } (0, 25\pi] = \mid -25\pi/2\pi \mid \text{(since the cycle of sine is } 2\pi) = 12\]
+Additionally, since we skipped 0 and started counting on the positive part of the x axis at $2\pi$, we missed 1 cycle of sine from $(0, 2\pi)$, hence another 2 intersection points. Now we just need to check the two endpoints to see if there is just 1 intersection for that peak. 
+\[\sin(-25\pi) \neq 1 \text{ and } \sin(25\pi) \neq 1\]
+Hence, the amount of intersections are
+\[24\cdot2 +2 = 50\]
+\section{}
+Skipped. 
+\end{document}

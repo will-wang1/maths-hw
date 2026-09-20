@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Lesson 32 Homework - Proof Writing}
+\author{William Wang}
+\date{May 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+Let there be unit circle in the complex plane with centre $0$. Since \(OAB\), \(OCD\), and \(OEF\) are equilateral, we have \(|A| = |B| = |C| = |D| = |E| = |F|=1\). Since each vertex is related by a rotation of \(60^\circ\). We have \(B = Ae^{i\pi/3}\), \(D = Ce^{i\pi/3}\) and \(F = Ee^{i\pi/3}\) with \(\omega = e^{i\pi/3}\) being fixed. Then we have 
+\[L = \frac{B+C}{2}, M = \frac{D+E}{2}, N = \frac{A+F}{2}\]
+Then
+\[L = \frac{A\omega +C}{2}, M = \frac{C\omega +E}{2}, N = \frac{E\omega + A}{2}\]
+Then we know that \(LMN\) is only equilateral if 
+\[L + M\zeta + N\zeta^2 = 0\]
+where \(\zeta = e^{2\pi/3}\) is a primitive cube root of unity. 
+\[L + M\zeta + N\zeta^2 = \frac{A\omega +C}{2} + \frac{C\omega +E}{2}\zeta + \frac{E\omega + A}{2}\zeta^2\]
+\[= \frac{1}{2}(A\omega + C + C\omega\zeta + E\zeta + E\omega\zeta^2 + A\zeta^2)\]
+\[= \frac{1}{2}(A(\omega+\zeta^2) + C(1+\omega\zeta) + E(\zeta + \omega\zeta^2)\]
+Then we have 
+\[1+\omega+\zeta = \zeta^{-1}(\zeta + \omega\zeta^2), \quad \zeta+\omega\zeta^2 = \zeta^2\cdot \zeta^{-1}(\zeta+\omega\zeta^2)\]
+Since all three groups share the same scalar factor. 
+\[\frac{1+\omega\zeta}{\omega+\zeta^2} = \frac{\zeta+\omega\zeta^2}{1+\omega\zeta}\]
+Since \(\omega = e^{i\pi/3}\) and \(\zeta = e^{4i\pi/3}\). Then 
+\[\omega + \zeta^2 = e^{i\pi/3} + e^{i4\pi/3} = e^{i\pi/3}(1+e^{i\pi}) = e^{i\pi/3}(1-1) =0\]
+Similarly,
+\[1+\omega\zeta + 1e^{i\pi/3}e^{2\pi/3} = 1+e^{i\pi} = 1-1 = 0\]
+and
+\[\zeta+\omega\zeta^2 = e^{2\pi/3}(1+ e^{i\pi/3}e^{2\pi/3}) = e^{2\pi i /3} \cdot 0 = 0\]
+Since these terms are all equal to $0$, this means that 
+\[L + M\zeta+N\zeta^2 = 0\]
+This holds for all choices of $A, C, E$ on the unit circle. 
+
+\section{}
+
+
+\end{document}

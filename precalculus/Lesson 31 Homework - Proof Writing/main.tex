@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Lesson 31 Homework - Proof Writing}
+\author{William Wang}
+\date{May 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+\subsection{}
+Ever 12th root of unity can be written as
+\[z = e^{2\pi in/12}, n = 0,1,2,..,11\]
+A root \(z = e^{2\pi in/12}\) is a primitive kth root of unity if 
+\[z^k = 1 \text{ and no smaller positive power gives 1}\]
+We have 
+\[(e^{2\pi i n/12})^m = 1 \]
+if and only if 
+\[\frac{n}{12}m \in \mathbb{Z}\]
+The smallest such \(m\) is \(\frac{12}{\gcd(n,12)}\). We can then compute \(k = \frac{12}{\gcd(n,12)}\) for all \(n = 0,1,2,...,11\). Hence
+\[k = \frac{12}{1}, \frac{12}{2}, \frac{12}{3}, \frac{12}{4}, \frac{12}{6}, \frac{12}{12} = 12,6,4,3,2,1\]
+
+\subsection{}
+If \(k = 1\), \(\gcd(n,12) = 12\)
+\section{}
+\subsection{}
+\subsection{}
+\end{document}

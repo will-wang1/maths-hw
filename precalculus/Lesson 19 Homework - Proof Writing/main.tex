@@ -1,0 +1,63 @@
+\documentclass{article}
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+
+% Declare the 'proj' operator
+\DeclareMathOperator{\proj}{proj}
+
+\title{Lesson 19 Homework - Proof Writing}
+\author{William Wang}
+\date{February 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+\subsection{}
+The projection of a vector is given by:
+\[\text{proj}_{\vec{a}} \vec{b} = \biggl ( \frac{\vec{a}\cdot\vec{b}}{\| \vec{a}\|^2}\biggl)\vec{a} \]
+Then if we plug in the values 
+\[\Bigl(\frac{3b_x - b_y}{10}\Bigl)(3) = 6\]
+\[\Bigl(\frac{3b_x - b_y}{10}\Bigl)(-1) = -2\]
+Notice that they both simplify down to \(3b_x - b_y = 20\). Since these two simultaneous equations are the same, there are infinite solutions
+\subsection{}
+If we know that we have \(\|\vec{b}\| = 10\), then we have two different equations. 
+\[\sqrt{b_x^2 + b_y^2}  = 10 \implies  b_x^2 + b_y^2 = 100\]
+\[3b_x - b_y = 20\]
+\[b_x = 6 \pm \sqrt{6}, b_y = -2 + 3\sqrt{6} \text{ or} -38 -3\sqrt{6}\]
+Hence there are two answers. 
+\section{}
+\subsection{Necessity}
+\[\|\vec{v} + \vec{w}\| = \|\vec{v} - \vec{w}\|\]
+By splitting into components and taking away the square root, we have
+\[(v_x + w_x)^2 + (v_y + w_y)^2 = (v_x-w_x)^2 + (v_y-w_y)^2\]
+By expanding we get
+\[ v_x^2 + 2v_x w_x + w_x^2 + v_y^2+2v_y w_y + w_y^2 = v_x^2 - 2v_xw_x+w_x^2 + v_y^2-2v_yw_y+w_y^2\]
+Then by canceling and dividing both sides by 2, we can get 
+\[v_xw_x+v_yw_y = -v_xw_x-w_yv_y \implies 1(v_xw_x+v_yw_y) = -1(v_xw_x+v_yw_y)\]
+This can only exist if \(v_xw_x+v_yw_y = 0 \implies \vec{v} \cdot \vec{w} = 0\) which means that \(\vec{v} \perp \vec{w}\). 
+
+\subsection{Sufficiency}
+Given \(\vec{v} \perp \vec{w}\), we want to prove that \(\|\vec{v} + \vec{w}\| = \|\vec{v} + \vec{w}\|\). Since \(\vec{v} \perp \vec{w}\), we know that \(v\cdot w = 0 \implies v_xw_x + v_yw_y = 0\). We also know that 
+\[v_xw_x+v_yw_y = -v_xw_x-v_yw_y\]
+since both sides are equal to $0$.
+\[v_xw_x+v_yw_y = -v_xw_x-v_yw_y \implies 2v_xw_x+2v_yw_y = -2v_xw_x+2v_yw_y\]
+Then by adding the same thing to both sides, we can get
+\[v_x^2 + 2v_x w_x + w_x^2 + v_y^2+2v_y w_y + w_y^2 = v_x^2 - 2v_xw_x+w_x^2 + v_y^2-2v_yw_y+w_y^2\]
+which we can factorize into
+\[(v_x + w_x)^2 + (v_y+w_y)^2 = (v_x-w_x)^2+(v_y-w_y)^2\]
+we know this is equal to 
+\[\|\vec{v}+\vec{w}\|^2 = \|\vec{v}-\vec{w}\|^2 \implies \|\vec{v}+\vec{w}\| = \|\vec{v} - \vec{w}\|\]
+Hence sufficiency and necessity are proved and so \(\|\vec{v}+\vec{w}\| = \|\vec{v} - \vec{w}\|\) if and only if \(\vec{v} \perp \vec{w}\). 
+\section{}
+Since we know that \(\vec{u}, \vec{v}, \vec{w}\) are all orthogonal to each other, it means that the dot product of each of them is equal to $0$. Then we have the equation 
+\[\vec{r} = a\vec{u}+b\vec{v}+c\vec{w}\]
+we can take the dot product of  both sides of the equation by \(\vec{u}, \vec{v}, \vec{w}\) one by one and two of the terms will turn into $0$ since they are orthogonal and the last term will be a constant term since \(\vec{a}\cdot\vec{a} = \|a\|^2\). 
+\[\vec{r}\cdot \vec{u} = a\|u\|^2+0+0 = a\]
+\[\vec{r}\cdot\vec{v} = 0+ b\|v\|^2+0 =b\]
+\[\vec{r}\cdot \vec{w} = 0+0+c\|w\|^2 = c\]
+Hence we have the equations
+\[a = \vec{r}\cdot \vec{u}, b = \vec{r}\cdot\vec{v}, c = \vec{r} \cdot \vec{w}\]
+\end{document}

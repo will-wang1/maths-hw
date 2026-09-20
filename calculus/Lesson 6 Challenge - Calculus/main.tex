@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\title{Lesson 6 Challenge - Calculus}
+\author{William Wang}
+\date{September 2026}
+
+\begin{document}
+
+\maketitle
+Since $f$ is continuous at $c$, by definition, for every $\varepsilon > 0$ there exists $\delta > 0$ such that whenever $x$ is in the domain and $|x-c| < \delta$,
+\[
+|f(x) - f(c)| < \varepsilon.
+\]
+
+Since $f(c) \neq 0$, choose
+\[
+\varepsilon = \frac{|f(c)|}{2} > 0.
+\]
+
+By continuity, there is a $\delta > 0$ such that for all $x \in (a,b)$ with $|x - c| < \delta$,
+\[
+|f(x) - f(c)| < \frac{|f(c)|}{2}.
+\]
+
+\textbf{Case 1: $f(c) > 0$.}
+
+Then the inequality above gives
+\[
+-\frac{f(c)}{2} < f(x) - f(c) < \frac{f(c)}{2},
+\]
+\[
+\frac{f(c)}{2} < f(x) < \frac{3f(c)}{2}.
+\]
+We have $f(x) > \frac{f(c)}{2} > 0$ for all $x$ in $(c-\delta, c+\delta)$. So $f(x)$ has the same sign as $f(c)$ throughout this interval.
+
+\textbf{Case 2: $f(c) < 0$.}
+
+Then $|f(c)| = -f(c)$, and the same inequality gives
+\[
+-\frac{-f(c)}{2} < f(x) - f(c) < \frac{-f(c)}{2},
+\]
+\[
+\frac{3f(c)}{2} < f(x) < \frac{f(c)}{2}.\]
+We have, $f(x) < \frac{f(c)}{2} < 0$ for all $x$ in $(c - \delta, c+\delta)$. Again $f(x)$ has the same sign as $f(c)$.
+
+In either case, there is an interval $(c-\delta, c+\delta)$ about $c$ throughout which $f(x)$ has the same sign as $f(c)$.
+
+\end{document}

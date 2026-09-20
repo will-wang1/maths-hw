@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[thinc]{esdiff}
+\title{Lesson 11 Homework - Calculus}
+\author{William Wang}
+\date{September 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+We want to find the first and second order derivatives of 
+\[r = \frac{(\theta - 1)(\theta^2+\theta+1)}{\theta^3}\]
+We can see that the numerator is the factorization of difference of cubes, hence we have 
+\[r = \frac{\theta^3 - 1}{\theta} = 1+ \frac{1}{\theta^3} = 1+ \theta^{-3}\]
+Then differentiating using the power rule, we have
+\[\diff{r}{t} = 1 -3\theta^{-4} = 1 - \frac{3}{\theta^4}\]
+Then the second order derivative is 
+\[\diff[2]{r}{t} = \frac{d}{dt} (1-3\theta^{-4}) = 1 +\frac{12}{\theta^5}\]
+\section{}
+
+
+
+\end{document}

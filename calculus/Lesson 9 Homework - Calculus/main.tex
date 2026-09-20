@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{float}
+\title{Lesson 9 Homework - Calculus}
+\author{William Wang}
+\date{September 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+\subsection{}
+
+The slope of the line through two points is the change in $y$ over the change in $x$:
+\[
+m_{PQ} = \frac{f(b)-f(a)}{b-a}
+\]
+
+\subsection{}
+
+Substituting $b = a+h$, we get
+\[
+m_{PQ} = \frac{f(a+h)-f(a)}{(a+h)-a} = \frac{f(a+h)-f(a)}{h}
+\]
+
+\subsection{}
+
+Since $Q = (a+h, f(a+h))$ and $P = (a, f(a))$, the point $Q$ approaches $P$ exactly when its $x$-coordinate $a+h$ approaches $a$.
+\subsection{}
+\[
+f'(a) = \lim_{h \to 0} \frac{f(a+h)-f(a)}{h}
+\]
+
+For every fixed $h \neq 0$, the difference quotient $\frac{f(a+h)-f(a)}{h}$ is the slope of some secant line through $P$ and a nearby point $Q$. As $h \to 0$, the point $Q$ slides along the curve toward $P$, and the secant lines $PQ$ rotate, settling toward the line that best approximates the curve's direction right at $P$,  that line is, by definition, the tangent line.
+
+\subsection{}
+
+Let 
+\[f(x) = \frac{|h|}{h}\]
+By definition:
+\[
+f'(1) = \lim_{h \to 0} \frac{f(1+h)-f(1)}{h} = \lim_{h \to 0} \frac{|1+h-1| - |1-1|}{h} = \lim_{h \to 0} \frac{|h|}{h}
+\]
+
+Now check the two one-sided limits, since $|h|/h$ behaves differently depending on the sign of $h$:
+
+\begin{itemize}
+    \item As $h \to 0^{+}$: $h>0$, so $|h| = h$, giving $\dfrac{|h|}{h} = \dfrac{h}{h} = 1$.
+    \item As $h \to 0^{-}$,  $h<0$, so $|h| = -h$, giving $\dfrac{|h|}{h} = \dfrac{-h}{h} = -1$.
+\end{itemize}
+
+Since
+\[
+\lim_{h \to 0^{+}} \frac{|h|}{h} = 1 \neq -1 = \lim_{h \to 0^{-}} \frac{|h|}{h}
+\]
+the two one-sided limits disagree, so $\displaystyle\lim_{h\to 0} \frac{|h|}{h}$ doesn't exist. Therefore $f'(1)$ does not exist.
+Geometric interpretation: this makes sense since the graph of $|x-1|$ has a sharp corner at $x=1$. Approaching from the right, secant lines have slope trending to $+1$; approaching from the left, they trend to $-1$. Since the secant slopes approach different values depending on direction, there's no single well-defined tangent line at the corner which is consistent with the limit failing to exist.
+
+\section{}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{image.png}
+\end{figure}
+The graph appears to have a vertical tangent line at \(x = 0\). To confirm this, we take the limit as \(h\to 0\). We have to calculate the right hand and left hand derivative separately. 
+\[\lim_{h\to 0^+} \frac{f(0+h) - f(0)}{h} = \lim_{h \to 0^+} \frac{\sqrt{h}}{h} = \lim_{h\to 0^+} \frac{1}{\sqrt{h}}=  \infty\]
+\[\lim_{h\to 0^-} \frac{f(0+h) - f(0)}{h} = \lim_{h \to 0^-} \frac{-\sqrt{-h}}{h} = \lim_{h\to 0^-} = \frac{1}{\sqrt{-h}} = \infty\]
+Since the left hand and right hand derivatives agree with each other, the limit is \(\infty\). This confirms a vertical tangent line at \(x= 0 \)
+\section{}
+We have the function 
+\[f(x) = \begin{cases}
+    x^2 \ \text{if } x< 0 \\
+    x  \ \text{if } x \geq 0
+\end{cases}\]
+Then the right hand derivative is 
+\[\lim_{h \to 0^+} \frac{f(0+h) - f(0)}{h} = \lim_{h\to 0^+}\frac{h}{h} = 1\]
+The left hand derivative is 
+\[\lim_{h\to 0^-} \frac{f(0+h) - f(0)}{h} = \lim_{h\to 0^-} \frac{h^2}{h} = \lim_{h\to 0^-} h = 0\]
+Because the left hand derivative is not equal to the right hand derivative, it is not differentiable at \((0,0)\)
+
+
+
+\end{document}

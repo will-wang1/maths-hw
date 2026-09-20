@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Lesson 23 Homework - Proof Writing}
+\author{William Wang}
+\date{February 2026}
+
+\begin{document}
+
+\maketitle
+
+
+\section{}
+\subsection{}
+Since we know when multiplying the identity matrix with some matrix, we get the same matrix. Therefore we can experiment with other permutations of the identity matrices. Then we can find out that 
+\[F = \begin{pmatrix}
+    0&1 \\ 1&0
+\end{pmatrix}\]
+works. 
+\[FA = \begin{pmatrix}
+    0&1 \\ 1&0
+\end{pmatrix} \begin{pmatrix}
+    a_1&a_2 \\ a_3&a_4
+\end{pmatrix} = \begin{pmatrix}
+    a_3&a_4 \\ a_1&a_2
+\end{pmatrix}\]
+Then to find 
+\[AF = \begin{pmatrix}
+    a_1&a_2 \\ a_3&a_4
+\end{pmatrix} \begin{pmatrix}
+    0&1 \\ 1&0
+\end{pmatrix} = \begin{pmatrix}
+    a_2&a_1 \\ a_4&a_3
+\end{pmatrix}\]
+So the result is just swapping the two terms in each row. 
+\subsection{}
+We have 
+\[FA = \begin{pmatrix}
+    f_1&f_2 \\ f_3&f_4
+\end{pmatrix} \begin{pmatrix}
+    a_1&a_2 \\ a_3&a_4
+\end{pmatrix}\]
+\[f_1a_1 + f_2a_3 = a_3\]
+\[f_3a_1+f_4a_3 = a_1\]
+\[f_1a_2+f_2a_4 = a_4\]
+\[f_3a_2+f_4a_4 = a_2\]
+There are no solutions to this set of equations. Hence there is no matrix \(F\) such that \(FA\) swaps the column of any matrix $A$. 
+\section{}
+\subsection{}
+No there is no solution since when the $P$ is on the left of multiplication, the multiplication only changes the order of the rows not the columns hence, there is no $P$ such that $PA$ switches the first two columns but not the last one. 
+\subsection{}
+Yes
+\[AP = \begin{pmatrix}
+    a_1&a_2&a_3 \\ a_4&a_5&a_6 \\ a_7&a_8&a_8
+\end{pmatrix} \begin{pmatrix}
+    0&1&0 \\ 1&0&0 \\ 0&0&1
+\end{pmatrix}  = \begin{pmatrix}
+    a_2&a_1&a_3 \\ a_5&a_4&a_6 \\ a_8&a_7&a_9
+\end{pmatrix}\]
+\section{}
+ \(\mathbf{Av} + \mathbf{Bv} = 0 \implies \mathbf{v(A+B)} = 0\). Then let \(\mathbf{C = A+B} \implies \mathbf{Cv}=0\). Since this is true for all vector \(\mathbf{v}\), we can check it against the standard basis vectors. We know that \(\mathbf{Ce_j}\) is equal to the \(j\)th row the matrix $\mathbf{C}$. Then, since this must be $0$, we know that the $j$th row of $\mathbf{C}$ must be $0$. We can repeat for all rows until we get that $\mathbf{C}$ is equal to the $0$ matrix in the nth dimension. Since $\mathbf{A+B = 0} \implies \mathbf{A = -B}$. 
+ 
+\end{document}

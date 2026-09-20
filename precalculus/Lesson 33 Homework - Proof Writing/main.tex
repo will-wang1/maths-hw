@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Lesson 33 Homework - Proof Writing}
+\author{William Wang}
+\date{May 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+\subsection{}
+Let C be the origin of the complex plane. First of all, we want to find the midpoints of each side, then we have 
+\[d = \frac{b}{2},\quad e = \frac{a}{2}, \quad f = \frac{a+b}{2}\]
+Then we want to prove that \(d,g,a\) and \(c,g,f\) and \(b,g,e\) are all collinear. For \(c,g,f\), we know that \(c\) is already at the origin so we can just check if \(\frac{f}{g}\) is real. 
+\[\frac{f}{g} = \frac{\frac{a+b}{2}}{\frac{a+b+c}{3}} = \frac{\frac{a+b}{2}}{\frac{a+b}{3}} = \frac{3}{2}\]
+since this is real, \(c,g,f\) is collinear. Then for \(d,g,a\), we want to translate \(d\) to the origin and check if \(\frac{a-d}{g-d}\) is real. 
+\[\frac{a-d}{g-d} = \frac{a-\frac{b}{2}}{\frac{a+b+c}{3} - \frac{b}{2}} = \frac{\frac{2a-b}{2}}{\frac{2a+2b-3b}{6}} = 3\]
+Since this is real, \(d,g,a\) is collinear. Then for \(b,g,e\), we translate \(e\) and then check if \(\frac{b-e}{g-e}\) is real. 
+\[\frac{b-e}{g-e} = \frac{b-\frac{a}{2}}{\frac{a+b+c}{3}-\frac{a}{2}} = \frac{\frac{2b-a}{2}}{\frac{2a+2b-3a}{6}} = 3\]
+Since this is real, \(b,g,e\) is collinear. Hence \(g\), is on all medians. 
+
+
+\subsection{}
+We will use \(c,g,f\) instead of \(A,M,G\) because it achieves the same result. Because, if we can prove \(CG = 2GF\), then we can also do the same for all other medians. Then we have 
+\[g = \frac{a+b+c}{3} = \frac{a+b}{3}\]
+since we translate the triangle such that \(c\) is the origin. Since \(f\) is the midpoint of $a$ and $b$, 
+\[f = \frac{a+b}{2}\]
+Hence, we have 
+\[CG = |\frac{a+b}{2}|\]
+\[GF = |\frac{a+b}{2} - \frac{a+b}{3}| = |\frac{a+b}{6}|\]
+Therefore, 
+\[CG = 2GF\]
+
+
+
+\end{document}

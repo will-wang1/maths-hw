@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{amssymb}
+\title{Lesson 7 Homework - Proof Writing}
+\author{William Wang}
+\date{October 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+Since we know that $y = \arctan x \implies \tan y = x = \frac{x}{1}$, we know that we can construct a triangle with opposite side length $x$ and adjacent side length 1 and by the Pythagoras Theorem, we have the 
+\[\text{Hypotenuse} = \sqrt{x^2+1}\]
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{q1.png}
+    \caption{$y$ is the angle labelled}
+\end{figure}
+Then we have 
+\[\sin y = \frac{\text{opposite}}{\text{hypotenuse}} = \frac{x}{\sqrt{x^2+1}}\]
+By rationalizing the denominator, we have 
+\[\frac{x\sqrt{x^2+1}}{x^2+1}\]
+\section{}
+Since we have 
+\[3\cot(4k-\pi) = \sqrt{3} \implies \cot(4k-\pi) = \frac{\sqrt{3}}{3}\]
+Since we have $\cot x = \frac{1}{\tan x}$, we have 
+\[\tan(4k-\pi) = \frac{3}{\sqrt{3}}\]
+Then let $\theta = 4k-\pi$, we can construct a triangle: 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{q2.png}
+    \caption{The constructed triangle (not to scale)}
+\end{figure}
+Notice we can multiply each side by $\frac{\sqrt{3}}{3}$ so that we side lengths $(1, \sqrt{3}, 2)$, notice this is a 30-60-90 triangle. Hence we know that the angle
+\[\theta = \frac{\pi}{3}\implies 4k-\pi = \frac{\pi}{3} \implies k = \frac{\pi}{3}\]
+However since $\cot$ is a periodic function and has a cycle of $\pi$, we know that this transformed function has cycle of 
+\[\frac{\pi}{|B|} = \frac{\pi}{4}\]
+Hence the set of solution is 
+\[\{ \frac{\pi}{3} + \frac{\pi x} {4} \mid x \in \mathbb{Z}\}\]
+
+\end{document}

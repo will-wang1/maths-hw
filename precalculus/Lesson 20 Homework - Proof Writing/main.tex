@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{float}
+\title{Lesson 20 Homework - Proof Writing}
+\author{William Wang}
+\date{February 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+\subsection{}
+To find the parametrization of the line \(2x+y=5\), we need a vector parallel to the line and a point on the line. 
+\[P = (x_0, y_0) = (1,3)\]
+To find the vector, we note that the vector has a slope of $-2$. Then we know that the components of the vector is \(\vec{v_1} = \langle 1,-2\rangle\) since the rise over run has to be the same as the line. Hence the parametrization of the line is 
+\[l = \begin{pmatrix} 1\\ 3 \end{pmatrix} + t \begin{pmatrix} 1 \\-2 \end{pmatrix}\]
+
+\subsection{}
+Since the gradient of line $l$ is $-2$, the gradient of line $m$ has to be $1/2$ since they have to multiply to $-1$. Hence the vector is \(\vec{v_2} = \langle 2,1 \rangle \) and the point is \(P = (x_0, y_0) = (3,2)\). 
+\subsection{}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{q1.png}
+\end{figure}
+\section{}
+\subsection{}
+First we want to change each of the lines into the \(L = P + \vec{v}t\) form. 
+\[L_1 = (t+4, 2t-5, 3t+1) = \begin{pmatrix} 4 \\ -5 \\ 1\end{pmatrix} + t \begin{pmatrix}
+    1 \\ 2 \\ 3
+\end{pmatrix} \]
+\[L_2 = (8-2t, 1-4t, -7-6t) = \begin{pmatrix}
+    8 \\ 1 \\ -7
+\end{pmatrix} + t \begin{pmatrix}
+    -2 \\ -4 \\ -6
+\end{pmatrix} \]
+\[L_3 = (8-t, 1, 3t+7) = \begin{pmatrix}
+    8 \\ 1 \\ 7
+\end{pmatrix} + t \begin{pmatrix}
+    -1 \\ 0 \\ 3
+\end{pmatrix} \]
+Let \(v_1, v_2, v_3\) be the vector part and \(P_1, P_2, P_3\) be the point part for \(L_1, L_2, L_3\) respectively. Then we can just compare the vectors that are parallel and see if they intersect. First we can see that \(v_1\) and \(v_2\) are actually the same vector just multiplied by a scalar, which doesn't change the direction at all. Hence 
+\[L_1 \parallel L_2\]
+
+Since \(v_1\) and \(v_3\) are not multiples, that means they are either skew or intersect. Then by equating each parameter to each other we get 
+\[t+4 = 8-s \implies t+s = 4\]
+\[2t-5 = 1 \implies t=  3\]
+\[3t+1 = 3s+7\]
+By substituting the value of $t$ into the first equation, we get $s = 1$. This also statisfies the third equation, hence 
+\[L_1 \text{ and } L_2 \text{ intersect at } (7,1,10)\]
+$v_2$ and $v_3$ are also not multiples, hence they also must be skew or intersect. By applying the same process, we get 
+\[8-2t = 8-s \implies 2t = s\]
+\[1-4t=1 \implies t = 0\]
+\[-7-6t = 3s+7\]
+Then we get $s = 0$ however this is a contradiction with the last equation, hence they don't intersect. Since $L_1$ and $L_2$ don't intersect nor are they parallel, they are skew. 
+\subsection{}
+To find the distance between \(L_1\) and \(L_2\), we first want to find \(\vec{P_1P_2}\). 
+\[\vec{P_1P_2} = \langle 4,6,-8 \rangle\]
+\[d = \|\vec{P_1P_2} -\text{proj}_{\vec{v_1}} (\vec{P_1P_2})\|\]
+\[=\Biggl \|\vec{P_1P_2} - \vec{v_1}\biggl(\frac{v_1 \cdot P_1P_2}{\|v_1\|^2}\biggl) \Biggl\| = \biggl\|\vec{P_1P_2} -  \Bigl\langle \frac{4}{7}, \frac{8}{7}, \frac{12}{7} \Bigl \rangle \biggl\| =\biggl \| \Bigl\langle \frac{12}{7}, \frac{34}{7}, -\frac{68}{7} \Bigl \rangle \biggl\|\]
+\[= \frac{2\sqrt{1481}}{7}\]
+
+\subsection{}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{q2.png}
+\end{figure}
+\end{document}

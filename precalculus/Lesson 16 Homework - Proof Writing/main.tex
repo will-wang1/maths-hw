@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{float}
+\title{Lesson 16 Homework - Proof Writing}
+\author{William Wang}
+\date{December 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+We can first complete the square for both x and y. 
+\[x^2+12x-3y^2 +18y+21 = 0 \implies (x+6)^2 - 3(y-3)^2 = -12\]
+Then we can divide both side by $-12$, to get the standard equation of a upward-opening hyperbola. 
+\[\frac{(y-3)^2}{4} - \frac{(x+6)^2}{12} = 1\]
+Then we have 
+\[\text{Centre} = (-6,3)\]
+We can also find the vertices since the vertices are $(h, k \pm a)$. 
+\[\text{Vertices} = (-6,5), (-6,1)\]
+\[\text{Foci} = (h,k \pm \sqrt{4+12}) \implies (-6, 7), (-6.-1)\]
+Then since the slope of the asymptotes for vertical hyperbolas are \(\pm a/b = \pm \frac{2}{\sqrt{12}}\). Hence the asymptotes are
+\[y -3 = \frac{2}{\sqrt{12}}(x+ 6) \text{ and } y -3 = \frac{-2}{\sqrt{12}}(x+6)\]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{q1.png}
+\end{figure}
+\section{}
+\subsection{}
+From the graph we can see that it is a parabola and has vertex \((2,1)\). Then we have the equation for the parabola in the form of 
+\[y = a(x-h)^2 +k \text{ where \((h,k) \) is the vertex}\]
+So then we have 
+\[y = a(x-2)^2 + 1\]
+Then we can plug into another point on the graph to solve for $a$. 
+\[3 = a(0-1)^2+2 \implies a = 1\]
+Hence 
+\[y = (x-1)^2+2\]
+\subsection{}
+We can see from the graph that this is a circle of centre $(-3,2)$ and it passes through the origin. Then we have 
+\[(x-h)^2+(y-k)^2 = r^2 \implies (x+3)^2  + (y-2)^2 = r^2\]
+Then sub in the point for the origin to get $r^2 = 13$, hence 
+\[(x+3)^2 + (y-2)^2 = 13\]
+\subsection{}
+From the graph, we can see that it is an ellipse of centre \((3,2)\) and major axis length $8$ and minor axis length $6$. Then we can find the equation of ellipse. 
+\[\frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1\]
+Then \(a = 3, b = 4, h = 3, k = 2\)
+\[\frac{(x-3)^2}{9} + \frac{(y-2)^2}{16} = 1\]
+\subsection{}
+From the graph, we can see that it is an upward opening hyperbola with vertices $(-2,1), (-2,-3)$. The general form of an upward opening hyperbola is 
+\[\frac{(y-k)^2}{a^2} - \frac{(x-h)^2}{b^2} = 1\]
+We can also see that the centre of the hyperbola is $ (-2,-1)$, hence $ h = -2, k = -1$.
+\[\frac{(y+1)^2}{a^2} - \frac{(x+2)^2}{b^2} =1\]
+Then since we know that the vertices are $(h, k \pm a)$, we know that $a = 2$. Then we can sub in $(4,3)$ to find $b$.
+\[\frac{4^2}{2^2} - \frac{6^2}{b^2} = 1 \implies b^2 = 12\]
+Hence the equation of the graph is
+\[\frac{(y+1)^2}{4} - \frac{(x+2)^2}{12} = 1\]
+
+
+\end{document}

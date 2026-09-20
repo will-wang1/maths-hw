@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Lesson 5 Homework - Calculus}
+\author{William Wang}
+\date{August 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+We want to find 
+\[\lim_{x\to0}\frac{x\csc2x}{\cos 5x}\]
+We know that \(\csc x = \frac{1}{\sin x}\). Then
+\[\lim_{x\to0}\frac{x\csc2x}{\cos 5x} = \lim_{x\to0} \frac{x}{\sin 2x \cos 5x} = \lim_{x\to0} \biggl(\frac{x}{\sin 2x} \cdot \frac{1}{\cos 5x}\biggl)\]
+Since we know that \(\lim_{x\to 0} \frac{x}{\sin x} =1\), we can multiply the fraction with \(\sin\) in it by \(2\) to get the same identity. 
+\[\lim_{x\to0} \biggl (\frac{1}{2}\cdot\frac{2x}{\sin 2x} \cdot \frac{1}{\cos 5x}\biggl )\]
+We can then pull the constant to get 
+\[\frac{1}{2}\cdot \lim_{x\to0}\biggl( \frac{2x}{\sin 2x}\cdot \frac{1}{\cos 5x} \biggl) = \frac{1}{2} \cdot \lim_{x\to0}\frac{1}{\cos 5x} = \frac{1}{2}\]
+
+\section{}
+We want to find 
+\[\lim_{t\to 0} \frac{\sin(1-\cos t)}{1-\cos t}\]
+We know the identity that \(\lim_{t\to0} \frac{\sin t}{t} = 1\). Then we can let \(x = 1-\cos t\). Then as \(t\to 0\), we have \(x\to 0\), hence we can say
+\[\lim_{t\to0} \frac{\sin(1-\cos t)}{1-\cos t} = \lim_{x\to0}\frac{\sin x}{x} = 1\]
+
+
+\end{document}

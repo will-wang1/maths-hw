@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\title{Lesson 28 Homework - Proof Writing}
+\author{William Wang}
+\date{April 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+Let \(z = a+bi\). Then we have 
+\[|z-4+5i| = 2\sqrt{3} \implies |(a-4)+(b+5)i| = 2\sqrt{3}\]
+\[\implies \sqrt{(a-4)^2 + (b+5)^2} = 2\sqrt{3} \implies (a-4)^2 + (b+5)^2 = 12\]
+Notice that this is the equation of a circle with centre \(4,-5\) and radius of \(2\sqrt{3}\). Therefore, the area of the circle is 
+\[r^2\pi = 12\pi\]
+\section{}
+Since we have the identity \(|w|^2 = w\overline{w}\) and \(|z| = 1\) then
+\[
+ z\overline{z}=1.
+\]
+Hence
+\[
+|z-1|^2 = (z-1)(\overline{z}-1)
+= z\overline{z} - z - \overline{z} + 1
+= 1 - z - \overline{z} + 1
+= 2 - (z+\overline{z})
+\]
+and
+\[
+|z+1|^2 = (z+1)(\overline{z}+1)
+= z\overline{z} + z + \overline{z} + 1
+= 1 + z + \overline{z} + 1
+= 2 + (z+\overline{z})
+\]
+Therefore
+\[
+|z-1|^2 + |z+1|^2
+= \big(2 - (z+\overline{z})\big) + \big(2 + (z+\overline{z})\big)
+= 4
+\]
+
+\end{document}

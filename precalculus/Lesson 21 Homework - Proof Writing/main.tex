@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{float}
+\title{Lesson 21 Homework - Proof Writing}
+\author{William Wang}
+\date{February 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+\subsection{}
+It is impossible to have three or more linearly independent vectors in 2D because the dimension of the vector space \(\mathbb{R}^2\) is exactly 2, meaning you cannot have more than 2 linearly independent vectors. Let \(\vec{u}\) and \(\vec{v}\) be two linearly independent vectors in the vector space \(\mathbb{R}^2\). We know that the span of two linearly independent vectors is the entire 2D plane. However, if we were to introduce another vector \(\vec{w}\), it would also lie inside the 2D plane. However, since the span of $\vec{u}$ and \(\vec{v}\) is already the entire plane, \(\vec{w}\) is a linear combination of \(\vec{u}\) and \(\vec{v}\), hence it cannot be linearly independent from the two. 
+\subsection{}
+Let the three linearly independent vector be \(\vec{u}\), \(\vec{v}\) and \(\vec{w}\). The span of these vectors is the entire 3D space. Hence if there were another vector \(\vec{s}\), it would also have to be in 3D plane. This means that since \(\vec{s}\) would be in the span of the 3 vectors, it would be a linear combination of them. Hence it is impossible for \(\vec{s}\) to be linearly independent to \(\vec{u}\), \(\vec{v}\) and \(\vec{w}\). 
+\section{}
+\subsection{}
+\[\{\}\]
+The span of two linearly independent vectors is always the entire 2D plane, hence there are no two linearly independent vectors that have a span on a line through the origin. 
+\subsection{}
+\[\biggl\{\begin{pmatrix} 1 \\ 2 \end{pmatrix}, \begin{pmatrix}
+    2 \\4 
+\end{pmatrix}\biggl\}\]
+They are two linearly dependent vectors because 
+\[-2 \begin{pmatrix}
+    1 \\ 2
+\end{pmatrix} + \begin{pmatrix}
+    2 \\ 4
+\end{pmatrix} = \begin{pmatrix}
+    0 \\ 0
+\end{pmatrix} \]
+Since they are two linearly dependent vectors, the span will be a line through the origin. 
+\subsection{}
+\[\biggl \{ \begin{pmatrix}
+    2 \\ 2
+\end{pmatrix}, \begin{pmatrix}
+    1 \\ 2
+\end{pmatrix} \biggl \}\]
+If the two vectors would be linearly dependent, there would be some scalar multiple such that they sum to $0$. Then we would have 
+\[2a+b = 0\]
+\[2a+2b=0\]
+The only solution is 
+\[(a,b) = (0,0)\]
+Hence they are linearly independent. Since these two points are linearly independent, it means they form parallelograms when you add scalar multiples. These parallelograms can be extended to the entire plane by changing the scalar multiples of the two vectors. 
+\subsection{}
+\[\Biggl\{\begin{pmatrix}
+    1 \\ 1 \\ 1
+\end{pmatrix}, \begin{pmatrix}
+    2 \\ 2\\ 2
+\end{pmatrix} \Biggl \}\]
+They are two linearly dependent vectors because 
+\[-2 \begin{pmatrix}
+    1 \\ 1 \\ 2
+\end{pmatrix} + \begin{pmatrix}
+    2 \\ 2 \\ 2
+\end{pmatrix} = \begin{pmatrix}
+    0 \\ 0\\ 0
+\end{pmatrix}\]
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{1.png}
+\end{figure}
+\subsection{}
+\[\Biggl \{\begin{pmatrix}
+    1\\1\\1
+\end{pmatrix}, \begin{pmatrix}
+    1\\3\\2
+\end{pmatrix} \Biggl \}\]
+
+They are linearly independent, because if they weren't then we would have \(av_1 + bv_2  = 0\). This would lead to the following system of the equations
+\[a+2b=0\]
+\[a+3b= 0\]
+\[a+2b= 0\]
+The only solution is \((a,b) =(0,0)\). Hence they are linearly independent. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{2.png}
+\end{figure}
+\subsection{}
+\[\Biggl\{\begin{pmatrix}
+    1\\1\\1
+\end{pmatrix}, \begin{pmatrix}
+    1\\3\\2
+\end{pmatrix}, \begin{pmatrix}
+    2\\4\\3
+\end{pmatrix}\Biggl\}\]
+They are linearly independent because if \((a,b,c) = (-1,-1,1)\), then then the sum is 0. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{3.png}
+\end{figure}
+\subsection{}
+\[\Biggl\{\begin{pmatrix}
+    1 \\ 2 \\ 3
+\end{pmatrix}, \begin{pmatrix}
+    1 \\ 0 \\ 1
+\end{pmatrix}, \begin{pmatrix}
+    0 \\ 1\\ 0
+\end{pmatrix}\Biggl \}\]
+If they were linearly dependent, then if we multiplied each vector by some scalar number, they would sum to 0. 
+\[a+b = 0\]
+\[2a+c=0\]
+\[3a+b=0\]
+The only solution is \((a,b,c)=(0,0,0)\). Hence they are linearly independent. 
+
+
+\end{document}

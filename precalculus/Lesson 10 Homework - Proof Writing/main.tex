@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\usepackage{amsmath}
+\title{Lesson 10 Homework - Proof Writing}
+\author{William Wang}
+\date{October 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+\[
+S = \frac{\sin 10^\circ + \sin 20^\circ + \sin 30^\circ + \sin 40^\circ + \sin 50^\circ + \sin 60^\circ + \sin 70^\circ + \sin 80^\circ}{\cos 5^\circ \cos 10^\circ \cos 20^\circ}
+\]
+
+Using the sum formula:
+\[
+\sum_{k=1}^{n} \sin(kx) = \frac{\sin\left(\frac{nx}{2}\right)\sin\left(\frac{(n+1)x}{2}\right)}{\sin\left(\frac{x}{2}\right)}
+\]
+
+Let \( n = 8 \) and \( x = 10^\circ \):
+\[
+\sin 10^\circ + \sin 20^\circ + \cdots + \sin 80^\circ = \frac{\sin 40^\circ \sin 45^\circ}{\sin 5^\circ} = \frac{\sin 40^\circ}{\sin 5^\circ} \cdot \frac{\sqrt{2}}{2}
+\]
+
+So,
+\[
+S = \frac{\dfrac{\sqrt{2}}{2} \cdot \dfrac{\sin 40^\circ}{\sin 5^\circ}}{\cos 5^\circ \cos 10^\circ \cos 20^\circ}
+= \frac{\sqrt{2} \sin 40^\circ}{2 \sin 5^\circ \cos 5^\circ \cos 10^\circ \cos 20^\circ}
+\]
+
+Using double-angle identities:
+\[
+\sin 40^\circ = 2 \sin 20^\circ \cos 20^\circ, \quad
+\sin 20^\circ = 2 \sin 10^\circ \cos 10^\circ, \quad
+\sin 10^\circ = 2 \sin 5^\circ \cos 5^\circ
+\]
+
+Hence,
+\[
+\sin 40^\circ = 8 \sin 5^\circ \cos 5^\circ \cos 10^\circ \cos 20^\circ
+\]
+
+Substitute this back:
+\[
+S = \frac{\sqrt{2} \cdot 8 \sin 5^\circ \cos 5^\circ \cos 10^\circ \cos 20^\circ}{2 \sin 5^\circ \cos 5^\circ \cos 10^\circ \cos 20^\circ}
+= \frac{8\sqrt{2}}{2} = 4\sqrt{2}
+\]
+
+\section{}
+\subsection{}
+Skipped.
+\subsection{}
+We have the complementary identity that allows us to convert from $\cos$ to $\sin$, hence
+\[\sin(\alpha) + \cos(\beta) = \sin(\alpha) + \sin(\frac{\pi}{2}-\beta)\]
+Then we are able to use the sum to product identity to further simplify this down. 
+\[\sin(\alpha) + \sin(\frac{\pi}{2}+\beta) = 2\sin(\frac{\alpha+\frac{\pi}{2})-\beta}{2})\cos(\frac{\alpha+\beta-\frac{\pi}{2}}{2})\]
+Hence, 
+\[\sin(\alpha)+\cos(\beta) = 2\sin(\frac{\alpha+\frac{\pi}{2})-\beta}{2})\cos(\frac{\alpha+\beta-\frac{\pi}{2}}{2})\]
+
+
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Lesson 1 Challenge - Calculus}
+\author{William Wang}
+\date{August 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+If we had a next biggest number such that \(b > a\) then this would imply that there is nothing in between them. However we can show from part 2 that for any 2 numbers we can just take the average and to get a number \(c\) such that 
+\[a < c < b\]
+Hence there are is no next biggest number. Similar reasoning applies for the 2nd biggest number since that would mean that there is a 1st biggest number. Since we showed that doesn't exist, the 2nd biggest number also wouldn't exist because we can show that there is a number between the non-existent 1st biggest number and the 2nd biggest number. 
+\section{}
+ If we have two rational numbers \(q_1, q_2\), then we can find \(q\) if we just take the average of them. 
+\[q = \frac{q_1+q_2}{2}\]
+Since \(q_1\) and \(q_2\) are rational and we are just dividing by 2, \(q\) will also be rational. Without loss of generality, assume \(q_1 < q_2\). Then we know that \(q_1 < q\) since 
+\[q - q_1 = \frac{q_1+q_2}{2} - \frac{2q_1}{2} = \frac{q_2-q_1}{2} > 0\]
+Similarly, we know that \(q < q_2\) since 
+\[q_2 - q = \frac{2q_2}{2} - \frac{q_1+q_2}{2} = \frac{q_2-q_1}{2} >0 \]
+Therefore, \(q\) satisfies the conditions and it exists. 
+\section{}
+If we have two rational numbers \(q_1, q_2\) where \(q_1 < q_2\), let \(d= q_2-q_1\). We know that \(d >0\) and is also rational. Then let 
+\[s = q_1 + \frac{d}{\sqrt{2}}\]
+We know that \(s\) is irrational because\(\sqrt{2}\) is irrational while \(d\) is rational, meaning the whole \(\frac{d}{\sqrt{2}}\) term is irrational. Then we also know that 
+\[0 < \frac{d}{\sqrt{2}} < d\]
+meaning if we add \(q_1\) across the inequality, 
+\[q_1 < q_1 + \frac{d}{\sqrt{2}} < d+q_1\]
+Since \(q_1 + d = q_2\), 
+
+\[q_1 < s < q_2\]
+\section{}
+From the last 2 parts, we can show that for any 2 rational numbers, \(q_1, q_2\), we can find a rational and irrational number such that 
+\[q_1 < s <q_2\] and 
+\[q_1<q<q_2\]
+Therefore, this means that they are evenly distributed across the number lines and there would be no holes or gaps. 
+\section{}
+The limit shouldn't exist because depending on how you approach $0$, you should get different values. If you approach $0$ by plugging in only rational numbers, then the function returns \(1\) but if we approach $0$ by plugging in only irrational numbers, the function returns $0$. Since it has 2 different behaviors depending on how you approach $0$, the limit is undefined. 
+
+There are no values \(c\) such that 
+\[\lim_{x \to c} f(x)\] from similar reasoning. 
+
+
+\end{document}

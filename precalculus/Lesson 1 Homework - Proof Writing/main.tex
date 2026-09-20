@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{float}
+\title{Lesson 1 Homework - Proof Writing}
+\author{William Wang}
+\date{September 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+We know whether a function has an inverse if it passes the horizontal line test. Since the function \(f(x) = x^2 - 6x + 3\) is a quadratic function, we know that its graph is a parabola. So if we are able to find the axis of symmetry of the parabola and prove that \(x \ge 4\) and the axis of symmetry is lies in \(x\le 4\), than we know that it has an inverse. This is since the axis of symmetry means that any other point on the other side of it is a reflection of another point, therefore failing to the horizontal line test since it will have 2 points on one line. 
+
+We know that the axis of symmetry is \(-b/2a\) and hence the axis of symmetry of f(x) is \(x = 6/2 = 3\). Since \(3 < 4\), we know that $f(x)$ has an inverse that is defined. 
+
+The inverse of $f^{-1}(x)$ :
+\[x^2-6x+3 = (x-3)^2-6\]
+\[x = (y-3)^2-6\]
+\[x+6 = (y-3)^2 => y = 3\pm \sqrt{x+6}\]
+However, we have to restrict the inverse the plus sign otherwise it would fail the vertical line test and wouldn't be a function. Hence: 
+\[f^{-1}(x) = 3 +  \sqrt{x+6}\]
+GRAPH:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{q1.png}
+    \caption{$f^{-1}(x)$ and $f(x)$}
+
+\end{figure}
+\section{}
+\[
+f(x) = \frac{2x+a}{bx-2}, \qquad (bx \neq 2).
+\]
+
+We want \( f(f(x)) = x \). Let
+\[
+y = f(x) = \frac{2x+a}{bx-2}.
+\]
+
+Then
+\[
+f(f(x)) = \frac{2y+a}{by-2}
+= \frac{2\cdot \frac{2x+a}{bx-2} + a}{b \cdot \frac{2x+a}{bx-2} - 2}.
+\]
+
+Bring each part over the common denominator \(bx-2\):
+
+\[
+\text{Numerator} 
+= \frac{4x + 2a + a(bx-2)}{bx-2} 
+= \frac{x(4+ab)}{bx-2},
+\]
+
+\[
+\text{Denominator} 
+= \frac{2bx + ab - 2(bx-2)}{bx-2} 
+= \frac{ab+4}{bx-2}.
+\]
+
+Thus,
+\[
+f(f(x)) = \frac{\tfrac{x(4+ab)}{bx-2}}{\tfrac{ab+4}{bx-2}}
+= \frac{x(4+ab)}{ab+4}.
+\]
+
+For \( f(f(x)) = x \) to hold for all \(x\) in the domain,
+\[
+\frac{x(4+ab)}{ab+4} = x.
+\]
+
+This requires
+\[
+\frac{4+ab}{ab+4} = 1, \qquad ab+4 \neq 0.
+\]
+
+Therefore,
+\[ab \neq -4 \]
+
+is the condition under which \( f(x) \) is its own inverse.
+
+\end{document}

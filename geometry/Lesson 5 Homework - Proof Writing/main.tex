@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\title{Lesson 5 Homework - Proof Writing}
+\author{William Wang}
+\date{September 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{q1.png}
+    \caption{$\triangle GIH$}
+\end{figure}
+Since we know that $\triangle GIH$ is an isosceles triangle where $GH = HI$, we can drop the altitude from $H$ to $GI$ at $M$ and we know that $GM = MI$. Then we have 
+\[HM = \sqrt{9^2-3^2} = 6\sqrt{2}\]
+Then we have \(\tan \angle{GIH} = \tan \angle{HIM} = 2\sqrt{2}\). 
+\section{}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{q2.png}
+    \caption{A 45-45-90 and a 30-60-90 triangle}
+\end{figure}
+\subsection{}
+\[\text{30-60-90 Triangle: }\sin \frac{\pi}{6} = \frac{CB}{AB} = 1/2\]
+\[\text{45-45-90 Triangle: } \sin \frac{\pi}{4} = \frac{AB}{AC} = \frac{\sqrt{2}}{2}\]
+\[\text{30-60-90 Triangle: } \sin \frac{\pi}{3} = \frac{AC}{AB} =\frac{\sqrt{3}}{3}\]
+\[\text{30-60-90 Triangle: } \cos \frac{\pi}{6} = \frac{AC}{CB} = \frac{\sqrt{3}}{3}\]
+\[\text{45-45-90 Triangle: } \cos \frac{\pi}{4} = \frac{BC}{AC} = \frac{\sqrt{2}}{2}\]
+\[\text{30-60-90 Triangle: } \cos \frac{\pi}{3} = \frac{AB}{CB} = 1/2\]
+\[\text{30-60-90 Triangle: } \tan \frac{\pi}{6} = \frac{1/2}{\sqrt{3/4}} = \frac{\sqrt{3}}{3}\]
+\[\text{45-45-90 Triangle: } \tan \frac{\pi}{4} = \frac{\sqrt{1/2}}{\sqrt{1/2}} = 1\]
+\[\text{30-60-90 Triangle: } \tan \frac{\pi}{3} = \frac{\sqrt{3/4}}{1/2} = \sqrt{3}\]
+\subsection{}
+We need to use the unit circle definition since, in a right angle triangle, a $\pi$ or $0$ angle could never exist since it wouldn't be a valid triangle since the angle sum is $\pi/2$. Then 
+\[\sin 0 = 0\]
+since at 0 radians on the unit circle, the point is on the x axis, hence, the y value is 0. Then
+\[\sin \pi = 0\]
+Since $\pi $ just completes the unit circle, hence the point is the same. 
+\[\cos 0 = 1\]
+Since \((\sin 0, \cos 0)\) forms a point on the unit circle, $\cos 0 $ has to be 1 since $\sin 0 = 0$. By similar reasoning with $\pi$ radians completing the unit circle, 
+\[\cos \pi = 1\]
+
+\section{}
+We know that the max value of $\sin$ occurs when $x = \frac{\pi}{2}$. Additionally, we know that the range of $\sin$ is
+\[\sin x \in [-1, 1]\]
+ Notice that $\frac{\pi}{2} > 1 $ since $\pi \approx 3.14$, hence $\frac{\pi}{2} > 1.5$, hence $\frac{\pi}{2}$ is not in the range of $\sin x$, hence 1 cannot be achieved. 
+\end{document}

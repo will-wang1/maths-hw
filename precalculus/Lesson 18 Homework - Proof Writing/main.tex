@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{float}
+\title{Lesson 18 Homework - Proof Writing}
+\author{William Wang}
+\date{January 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{q1.png}
+\end{figure}
+\[\vec{u} = \biggl \langle \frac{20\sqrt{89}}{89}, \frac{32\sqrt{89}}{89} \biggr \rangle\]
+\section{}
+\begin{figure}[H]
+    \centering
+    \includegraphics[angle=90, width=1\linewidth,]{q2.png}
+\end{figure}
+
+Let the components of \(\vec{v}\) and \(\vec{w}\) be \(\langle v_x, v_y \rangle\) and \(\langle w_x, w_y\rangle\) respectively. Since we know that 
+\[\vec{v} - \vec{w} = \vec{v} + (-1)\vec{w} \]
+We also know that for any 2 vector \(\vec{a}, \vec{b} \)
+\[\vec{a} + \vec{b} = \langle a_x + b_x, a_y + b_y \rangle \]
+Hence we can do the same instead we can negate the components of \(\vec{w}\) such that \((-1)\vec{w} = \langle -w_x, -w_y \rangle\) and then we can use the component addition to get the same result as \(\vec{v} - \vec{w}\). 
+
+\section{}
+\subsection{}
+Let the \(A. B, C, D\) be the position vectors of the vertices of the quadrilaterals. Let M be intersection of diagonals $AC$ and $BD$. Since $AC$ and $BD$ bisect each other, $M$ is the midpoint of $AC$ and $BD$. Then we have the position vector of $M$ 
+\[\vec{M} = \frac{\vec{A}+ \vec{C}}{2} = \frac{\vec{B} + \vec{D}}{2} \]
+Hence we also have \(\vec{A} + \vec{C} = \vec{B} + \vec{D} \). Then we can rearrange to \(\vec{C} - \vec{B} = \vec{D} - \vec{A} \) which can be rewritten as \(\vec{CB} = \vec{AD}\). Since the vector $\vec{BC}$ is equal in length and direction as $\vec{AD}$, opposite sides are equal and parallel. Hence $ABCD$ is a parallelogram. 
+
+
+\subsection{}
+\subsection{}
+\end{document}

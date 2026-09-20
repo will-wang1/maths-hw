@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\title{Lesson 14 Homework - Proof Writing}
+\author{William Wang}
+\date{November 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+First we can convert the parametric equations to Cartesian equations in terms of x and y. For Coyote, we have 
+\[x = -2t+5\]
+\[y  = 6t-8\]
+Then we have \(t = (x-5)/(-2)\) and then we can substitute this value in for the second equation to get 
+\[\text{Coyote: } y = -3x+7\]
+For Roadrunner, we have 
+\[x = t-2\]
+\[y = t^2-4t+5\]
+The we have \(t = x+2\) and then we can substitute this value in for the second equation to get 
+\[\text{Roadrunner: } y = x^2 +1\]
+Their paths obviously cross since we can just solve the simultaneous equation 
+\[-3x+7 = x^2 +1 \implies 0 = x^2 +3x-6\] and the discriminant is greater than 0 hence there are 2 real solutions so the paths cross. 
+
+Then since Coyote only catches Roadrunner if their time and position are the same, we can      first solve for when the position is the same, that is the intersections of the equations. 
+\[x = \frac{-3 \pm \sqrt{33}}{2}\]
+\[y = \frac{23 \mp 3\sqrt{33}}{2}\]
+Then we can check if the times are the same. So let 
+\[A = (\frac{-3+\sqrt{33}}{2}, \frac{23-3\sqrt{33}}{2}) \text{ and } B = (\frac{-3-\sqrt{33}}{2}, \frac{23+3\sqrt{33}}{2})\]
+For point $A$, for Coyote, the value of t is 
+\[\frac{-3+\sqrt{33}}{2} = -2t+5 \implies t = \frac{13-\sqrt{33}}{4}\]
+For point $A$, for Roadrunner, the value of t is
+\[t = \frac{1+\sqrt{33}}{2}\]
+Since these aren't the same, Coyote doesn't catch Roadrunner here. For point $B$, for Coyote, the value of t is 
+\[\frac{-3-\sqrt{33}}{2} = -2t+5 \implies t = \frac{13+\sqrt{33}}{4}\]
+For point $B$, for Roadrunner. the value of t is
+\[t = \frac{1-\sqrt{33}}{2}\]
+Since these aren't the same, Coyote doesn't catch Roadrunner here. Since there are no more point with the same position, Coyote doesn't catch Roadrunner. 
+
+\end{document}

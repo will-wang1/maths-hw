@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Lesson 8 Homework - Calculus}
+\author{William Wang}
+\date{September 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+We want to find the domain and asymptotes of 
+\[y = \frac{\sqrt{x^2+4}}{x}\]
+The numerator \(\sqrt{x^2+4}\) is defined for all \(x\) since \(x^2+4 > 0\). The denominator can't be \(0\) so \(x\neq 0\). Hence the domain is 
+\[x\in (-\infty, 0) \cup (0, \infty)\]
+Then for vertical asymptotes, we want to evaluate the limit around \(0\). 
+\[\lim_{x\to 0^+} \frac{\sqrt{x^2+4}}{x} = \infty\]
+\[\lim_{x\to 0^-} \frac{\sqrt{x^2+4}}{x} = -\infty\]
+Hence there is a vertical asymptote at \(x=0\). Then for horizontal asymptotes we can evaluate the limit as \(x \to \pm \infty\). 
+\[\lim_{x\to \infty} \frac{\sqrt{x^2+4}}{x} = \lim_{x\to\infty} \sqrt{\frac{x^2+4}{x^2}} = \lim_{x\to \infty} \sqrt{1+\frac{4}{x^2}} = 1\]
+So \(y = 1\) is a horizontal asymptote
+\[\lim_{x\to -\infty} \frac{\sqrt{x^2+4}}{x} = \lim_{x\to -\infty} \frac{\sqrt{x^2+3}}{-\sqrt{x^2}} = -\lim_{x\to -\infty} \sqrt{1+\frac{4}{x^2}} = -1\]
+So \(y = -1\) is a horizontal asymptote. 
+\section{}
+We want to find the domain and asymptotes for 
+\[y = \frac{4e^x + e^{2x}}{e^x + e^{2x}}\]
+We can simply by factoring out the \(e^x\)
+\[\frac{4e^x+e^{2x}}{e^x+e^{2x}} = \frac{4+e^x}{1+e^x}\]
+Since \(e^x > 0\) for all real \(x\), \(1+e^x>0\). Hence the domain is 
+\[x \in (-\infty, \infty)\]
+Since the denominator is never \(0\) there can't be any vertical asymptotes. Then to find the horizontal asymptotes we take the limit as \(x\to \pm \infty\). 
+\[\lim_{x\to \infty} \frac{4+e^x}{1+e^x} = \lim_{x\to\infty} \frac{\frac{4}{e^x}+1}{\frac{1}{e^x}+1} = 1\]
+So \(y = 1\) is a horizontal asymptote. Then 
+\[\lim_{x\to -\infty} \frac{4+e^x}{1+e^x} = \frac{4+0}{1+0} = 4\]
+Hence there is an horizontal asymptote at \(y = 4\). 
+
+\section{}
+We want to evaluate 
+\[\lim_{x\to -\infty}2x+\sqrt{4x^2+3x-2}\]
+First let \(t = -x\), then we have 
+\[\lim_{t\to \infty} -2t + \sqrt{4t^2-3t-2}\]
+Then we can multiply and divide by the conjugate to get 
+\[\lim_{t\to \infty} \frac{(-2t+\sqrt{4t^2-3t-2})(2t+\sqrt{4t^2-3t-2})}{2t+\sqrt{4t^2-3t-2}}\]\[= \lim_{t\to \infty} \frac{4t^2-3t-2-4t^2}{2t+\sqrt{4t^2-3t-2}} = \lim_{t\to \infty} \frac{-3t-2}{\sqrt{4t^2-3t-2}+2t}\]
+Then we can divide the numerator and the denominator by \(t\). The numerator becomes
+\[\lim_{t\to \infty} \frac{-3-\frac{2}{t}}{\frac{\sqrt{4t^2-3t-2}}{t} + 2} = \lim_{t\to\infty}\frac{-3-\frac{2}{t}}{\sqrt{4-\frac{3}{t}-\frac{2}{t^2}}+2}\]
+Then as \(t\to \infty\) all terms that are divided by \(t\) become \(0\). Hence we have 
+\[=\frac{3}{\sqrt{4}+2} = \frac{3}{4}\]
+
+
+
+
+
+
+\end{document}

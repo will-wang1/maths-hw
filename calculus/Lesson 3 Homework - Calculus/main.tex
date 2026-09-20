@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\title{Lesson 3 Homework - Calculus}
+\author{William Wang}
+\date{August 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+Let $\varepsilon>0$ be arbitrary. Then $\displaystyle\lim_{x\to 1}(4x-6)=-2$ means
+there exists a $\delta>0$ such that
+\[
+0<|x-1|<\delta \;\implies\; |(4x-6)-(-2)|<\varepsilon.
+\]
+\section{}
+We have
+\[
+|(4x-6)-(-2)| = |4x-4| = |4(x-1)| = 4|x-1|
+\]
+
+Setting $4|x-1| < \varepsilon$ gives
+\[
+|x-1| < \frac{\varepsilon}{4}
+\]
+
+\begin{align*}
+\varepsilon = 0.1 \implies \delta = \frac{0.1}{4} = 0.025 \\
+\varepsilon = 0.01 \implies \delta = \frac{0.01}{4} = 0.0025 \\
+\varepsilon = 0.00001 \implies \delta = \frac{0.00001}{4} = 0.0000025
+\end{align*}
+\section{}
+We have
+\[
+|(4x-6)-(-2)| < \varepsilon
+\;\;\Longrightarrow\;\;
+|4x-4| < \varepsilon
+\;\;\Longrightarrow\;\;
+4|x-1| < \varepsilon
+\;\;\Longrightarrow\;\;
+|x-1| < \frac{\varepsilon}{4}
+\]
+
+\[
+\delta = \dfrac{\varepsilon}{4}
+\]
+
+\section{}
+ Let $\varepsilon>0$ be arbitrary and set $\delta = \dfrac{\varepsilon}{4} > 0$.
+
+So if we have that $0<|x-1|<\dfrac{\varepsilon}{4}$, we have
+\[
+|f(x)-L| = |(4x-6)-(-2)| = |4x-4| = |4(x-1)|
+\]
+\[
+= 4|x-1| < 4\left(\frac{\varepsilon}{4}\right) = \varepsilon.
+\]
+
+So the definition of limit is satisfied and $\displaystyle\lim_{x\to 1}(4x-6) = -2$.
+
+\end{document}

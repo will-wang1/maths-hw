@@ -1,0 +1,109 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Lesson 27 Homework - Proof Writing}
+\author{William Wang}
+\date{March 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+We want to show that \(NM = I\) and \(MN = I\). 
+\[MN = (AB)(A^{-1}B^{-1})\]
+By using the associative property of matrix multiplication, we have 
+\[MN = A(BB^{-1})A^{-1} = I(AA^{-1}) = I\cdot I = I\]
+Similarly for \(NM = I\)
+\[NM = (A^{-1}B^{-1})(AB)\]
+By using the associative property of matrix multiplication, we have
+\[NM = A(BB^{-1})A^{-1} = I(AA^{-1}) = I\cdot I = I\]
+\section{}
+We know that \(AA^{-1} = I\). Then we can take the determinant of both sides. 
+\[\text{det}(AA^{-1}) = \text{det}(I) \implies \text{det}(A)\text{det}(A^{-1}) = 1\]
+Hence 
+\[\text{det}(A) = \frac{1}{\text{det}(A^{-1})}\]
+
+
+\section{}
+\subsection{}
+\[M = \begin{pmatrix}
+    2/\sqrt{2}&-2/\sqrt{2} \\ 2/\sqrt{2}&2/\sqrt{2}
+\end{pmatrix} = 2\begin{pmatrix}
+    1/\sqrt{2}&-1/\sqrt{2} \\ 1/\sqrt{2}&1/\sqrt{2} 
+\end{pmatrix}\]
+Since we know that the rotation matrix is 
+\[\begin{pmatrix}
+    \cos\theta&-\sin\theta \\ \sin\theta&\cos\theta
+\end{pmatrix}\]
+So we have \(\theta = 45^\circ\). Hence the matrix is a 45 degrees rotation counterclockwise follow by a dilation of a factor of 2. Then we know that \(M\) is invertible if the determinant is nonzero.
+\[\text{det}(M) = 4\]
+Since this is non-zero we can then find the inverse. 
+\[M^{-1} = \frac{1}{4}\begin{pmatrix}
+    2/\sqrt{2}&2/\sqrt{2} \\ -2/\sqrt{2}&2/\sqrt{2}
+\end{pmatrix} = \begin{pmatrix}
+    1/2\sqrt{2}&1/2\sqrt{2} \\ -1/2\sqrt{2}&1/2\sqrt{2} 
+\end{pmatrix}\]
+This makes sense because we have \(\theta = -45^\circ\) which is a clockwise rotation of 45 degrees and then a dilation by a factor of 1/2 which undoes the first matrix. 
+\subsection{}
+\[N = \begin{pmatrix}
+    1&0 \\ 0&0
+\end{pmatrix}\]
+This takes any point \((x,y)\) and maps it to \((x,0)\). The determinant is 0, hence the matrix is not invertible. This makes sense because if we are given point \((x,0)\) there are infinite many points it could have been before hence we can't undo this operation.
+\section{}
+\subsection{}
+The coefficient matrix is 
+\[A = \begin{pmatrix}
+    1&2&-3 \\ 4&-2&-16 \\ -1&3&5
+\end{pmatrix}\]
+To check if it is invertible we can find the determinant of the matrix.
+\[\text{det}(A) = 0\]
+Since the determinant is 0, it means that $A$ is not invertible. However this doesn't mean there are no solutions to the system of equations. As I proved last week, as long as 
+\[v-2u+2w \neq 0\]
+the system is consistent meaning there are solutions. 
+\subsection{}
+The coefficient matrix is
+\[A = \begin{pmatrix}
+    1&2&-3  \\ 2&-1&-7 \\ -1&3&5
+\end{pmatrix}\]
+To check if it is invertible we can find the determinant of the matrix. 
+\[\text{det}(A) = -5\] Since the determinant is nonzero, the matrix is invertible. We can then find the inverse matrix by performing Gaussian elimination with the identity matrix.
+\[\begin{pmatrix}
+    1&2&-3&|&1&0&0 \\ 2&-1&-7&|&0&1&0 \\ -1&3&5&|&0&0&1
+\end{pmatrix}\]
+Then \(R_2 \rightarrow R_2 - 2R_1\)
+\[\begin{pmatrix}
+    1&2&-3&|&1&0&0 \\ 0&-5&-1&|&-2&1&0 \\ -1&3&5&|&0&0&1
+\end{pmatrix}\]
+Then \(R_3 \rightarrow R_1 + R_3\)
+\[\begin{pmatrix}
+    1&2&-3&|&1&0&0 \\ 0&-5&-1&|&-2&1&0 \\ 0&5&2&|&1&0&1
+\end{pmatrix}\]
+Then \(R_3 \rightarrow R_2 + R_3\)
+\[\begin{pmatrix}
+    1&2&-3&|&1&0&0 \\ 0&-5&-1&|&-2&1&0 \\ 0&0&1&|&-1&1&1
+\end{pmatrix}\]
+Then \(R_2 \rightarrow R_2 + R_3\)
+\[\begin{pmatrix}
+    1&2&-3&|&1&0&0 \\ 0&-5&0&|&-3&2&1 \\ 0&0&1&|&-1&1&1
+\end{pmatrix}\]
+Then \(R_1 \rightarrow 3R_3 + R_1\)
+\[\begin{pmatrix}
+    1&2&0&|&-2&3&3 \\ 0&-5&0&|&-3&2&1 \\ 0&0&1&|&-1&1&1
+\end{pmatrix}\]
+Then \(R_2 \rightarrow -\frac{1}{5}R_2\)
+\[\begin{pmatrix}
+    1&2&0&|&-2&3&3 \\ 0&1&0&|&3/5&-2/5&-1/5 \\ 0&0&1&|&-1&1&1
+\end{pmatrix}\]
+
+Then \(R_1 \rightarrow R_1 - 2R_2\)
+\[\begin{pmatrix}
+    1&0&0&|&-16/5&19/5&17/5 \\ 0&1&0&|&3/5&-2/5&-1/5 \\ 0&0&1&|&-1&1&1
+\end{pmatrix}\]
+Hence the inverse matrix is 
+\[\begin{pmatrix}
+    -16/5&19/5&17/5 \\ 3/5&-2/5&-1/5 \\ -1&1&1
+\end{pmatrix}\]
+
+\end{document}

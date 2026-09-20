@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\setlength{\parindent}{0pt}
+\title{Lesson 5 Challenge - Calculus}
+\usepackage{amsmath}
+\author{William Wang}
+\date{August 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+We want to prove that if we have 
+\[\lim_{x \to 0} f(x) = L\]
+then we have 
+\[\lim_{x \to 0} f(cx)  = L\]
+When we want to get the graph of \(f(cx)\) from \(f(x)\), we compress the graph horizontally by \(1/c\). So if the coordinates a point were \((a,b)\) then on the second graph it would be \((a/3, b)\). 
+
+Then since we know that \(\lim_{x\to 0} f(x) = L\), by the definition of a limit, we have for every \(\epsilon > 0\) we have \(\delta_1 >0\) such that 
+\[0 < |x| < \delta_1 \implies |f(x) - L|  < \epsilon\]
+Let \(\epsilon > 0\), we need to find a \(\delta_2 > 0\) such if 
+\[0 < |x| < \delta_2 \implies |f(cx) - L| < \epsilon\] Since \(c \neq 0\), we can define 
+\[\delta_2 = \frac{\delta_1}{|c|}\]
+\textbf{Proof}
+By the definition of a limit, since 
+\[\lim_{u\to0}f(u) = L\]
+We know that an arbitrary \(\epsilon > 0\), there exists an \(\delta_1 > 0\) such that if
+\[0 < |u| < \delta_1\]
+then 
+\[|f(u)-L| < \epsilon\]
+Then let \(\epsilon > 0\) be given and we have \(\delta_2 = \frac{\delta_1}{|c|}\) and assume we have
+\[0 < |x| < \delta_2 \]
+then we can multiply the inequality by \(|c|\) to get 
+\[0\cdot|c| < |c| \cdot|x| < \delta_2 \cdot|c|\]
+\[0 < |cx| < \frac{\delta_1}{|c|}\cdot |c|\]
+\[0 < |cx| < \delta_1\]
+The let \(u = cx\). Since \(0 < |u| < \delta_1\), it follows that 
+\[|f(u) - L| < \epsilon\]
+Hence 
+\[\lim_{x\to0} f(cx) =L\]
+\section{}
+Let 
+\[f(x) = \begin{cases}
+    3 & \text{if } x \geq 0 \\
+    1  & \text{if } x < 0
+\end{cases}\]
+If we take the right hand limit, we have 
+\[\lim_{x\to0^+} f(x) =3\]
+since all the values we are using will be positive. However if we take the left hand limit
+\[\lim_{x\to 0^-} f(x) = 1\]
+since all values we are using will be negative. Since the definition of a limit is only fulfilled when the right hand limit and the left hand limit are the same, the limit doesn't exist. 
+
+However if we have \(f(x^2)\) then all values will be positive since \(x^2 \ge 0\). Hence 
+\[\lim_{x\to 0} f(x^2) = 3\]
+Therefore the limit exists for \(f(x^2)\) but not \(f(x)\). 
+\end{document}

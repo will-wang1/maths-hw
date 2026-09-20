@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\title{Lesson 30 Homework - Proof Writing}
+\author{William Wang}
+\date{April 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+Since we have 
+\[z^3 = -4\sqrt{2} + 4\sqrt{2}i\]
+We can turn both sides into exponential form. 
+\[z^3 = (re^{i\theta})^3 = r^3e^{3i\theta}\]
+\[-4\sqrt{2} + 4\sqrt{2}i = 8cis(-\pi / 4) = 8e^{-\pi i / 4}\]
+Then we have 
+\[r^3e^{3i\theta} = 8e^{-\pi i /4} = 2^3e^{-\pi i /4}\]
+Then we can get 
+\[r^3 = 2^3 \implies r = 2\]
+\[e^{3i\theta} = e^{-\pi i /4} \implies \theta = \frac{-\pi}{12}\]
+However, we also know that since sine and cosine have a period of $2\pi$. We have infinitely many conversion into exponential form because the theta can change. Therefore,
+\[-4\sqrt{2}+4\sqrt{2}i = 8cis(-\pi/4 + 2k\pi) = 8e^{-i\pi/4+2ik\pi}\]
+Hence $r = 2$ and 
+\[\theta = -\frac{-\pi}{12}+\frac{2k\pi}{3} \]
+Hence the solution are 
+\[2e^{i(-\pi/12 + 2k\pi/3)}\]
+where $k$ is a real integer. 
+
+\section{}
+We can first turn $x$ and $y$ into polar form so we can make the exponent easier. 
+\[x = \frac{-1+i\sqrt{3}}{2} = cis(-2\pi/3 )\]
+\[y = \frac{-1-i\sqrt{3}}{2} = cis(2\pi/3 )\]
+Then we can use De Moivre's theorem to make the exponents easier to deal with.
+\[x^n + y^n = cis(-2\pi n /3) +cis(\pi n /3)=-1\]
+\[= \cos(\frac{2\pi n }{3}) + i\sin(\frac{2\pi n }{3}) + \cos(\frac{-2\pi n }{3}) + i\sin(\frac{-2\pi n }{3} )\]
+Using the sum to product indentites, we 
+\[x^n + y^n = 2\cos(0)\cos(\frac{2\pi n}{3} ) + i2\sin(0)\sin(\frac{2\pi n}{3})\]
+\[= 2\cos(\frac{2\pi n}{3})\]
+Then we want to solve 
+\[2\cos(\frac{2\pi n }{3})) = -1\]
+\[\cos(\frac{2\pi n}{3}) = \frac{-1}{2}\]
+We see that for the cosine part, if \(n = 3k\). Then \(\cos(\frac{2\pi n}{3})=0\) hence there are no solutions when \(n = 3k\). Then we can check when \(n = 3k+1\). 
+\[\cos(2\pi k +\frac{2\pi}{3}) =\cos(\frac{2\pi}{3}) = \frac{-1}{2}\]
+Hence all solutions where $n = 3k+1$. Then we can check $n = 3k+2$.
+\[\cos(2\pi k+\frac{4\pi}{3}) = \cos(\frac{4\pi}{3}) = \frac{-1}{2}\]
+Hence the solutions are all $n$ such that $n = 3k+1$ or $n = 3k+2$ where $k$ is a real integer. 
+
+\end{document}

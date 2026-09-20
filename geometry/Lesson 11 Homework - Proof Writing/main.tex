@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+
+\title{Lesson 11 Homework - Proof Writing}
+\author{William Wang}
+\date{November 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+Let \( PC = x \). We aim to find the value of \( x \).
+
+\[
+AB^2 = PA^2 + PB^2 - 2 \cdot PA \cdot PB \cdot \cos(120^\circ)
+\]
+\[
+AB^2 = 10^2 + 6^2 - 2 \cdot 10 \cdot 6 \cdot (-\tfrac{1}{2}) = 100 + 36 + 60 = 196
+\Rightarrow AB = \sqrt{196} = 14
+\]
+\[
+BC^2 = PB^2 + PC^2 - 2 \cdot PB \cdot PC \cdot \cos(120^\circ)
+\]
+\[
+BC^2 = 6^2 + x^2 + 6x = 36 + x^2 + 6x
+\]
+
+\[
+AC^2 = PA^2 + PC^2 - 2 \cdot PA \cdot PC \cdot \cos(120^\circ)
+\]
+\[
+AC^2 = 10^2 + x^2 + 10x = 100 + x^2 + 10x
+\]
+
+
+Since \( \angle B = 90^\circ \), we have:
+\[
+AC^2 = AB^2 + BC^2 = 196 + (36 + x^2 + 6x) = 232 + x^2 + 6x
+\]
+
+
+
+\[
+100 + x^2 + 10x = 232 + x^2 + 6x
+\Rightarrow 100 + 10x = 232 + 6x
+\Rightarrow 4x = 132
+\Rightarrow x = 33
+\]
+
+Hence
+\[PC = 33\]
+
+
+\end{document}

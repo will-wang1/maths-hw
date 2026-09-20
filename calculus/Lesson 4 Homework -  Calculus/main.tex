@@ -1,0 +1,165 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{float}
+\title{Lesson 4 Homework -  Calculus}
+\author{William Wang}
+\date{August 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+We want to prove that 
+\[\lim_{x\to 3} (3x-7) = 2\]
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{1.png}
+\end{figure}
+From this graph we can find a \(\delta\) for any \(\epsilon >0\). 
+\[3(3-\delta)-7=2-\epsilon \implies \delta = \epsilon/3\]
+We can also check that it works with the boundary. 
+\[3(3+\varepsilon/3)-7 = 2+\varepsilon \implies \varepsilon = \varepsilon\]
+which is always true. Hence we have found \(\delta\). 
+
+
+\textbf{Proof}
+Given \(\varepsilon >0\), we can take \(\delta >0\) to be \(\delta = \varepsilon/3\) so that whenever 
+\[0 < |x-3| < \delta\]
+we have 
+\[|f(x)-2| < \varepsilon\]
+
+From the first inequality, we know that \(\delta = \varepsilon/3\)
+\[0 < |x-3| < \varepsilon/3\]
+Multiplying by 3 gives 
+\[0 < 3|x-3| < \varepsilon\]
+\[0 < |3x-9| < \varepsilon\]
+\[0<|3x-7-2| = |f(x)-2| < \varepsilon\]
+Hence it fulfills the definition of the limit and we have proven that 
+\[\lim_{x\to3}(3x-7) = 2\]
+\section{}
+We have 
+\[\lim_{x\to1}\frac{x^2-1}{x-1} = \lim_{x\to 1}\frac{(x-1)(x+1)}{x-1}\]
+Since we are taking the limit as \(x\to1\) we can cancel because we don't care about what happens at \(x=1\). Hence
+\[\lim_{x\to1}\frac{x^2-1}{x-1} = \lim_{x\to1}x+1\]
+We can solve for \(\delta\)
+\[(1-\delta) + 1 = 2-\varepsilon\]
+and we get 
+\[\delta = \varepsilon\]
+We can check with the other bound 
+\[(1+\varepsilon)+1 = 2+\varepsilon\]
+which is true. Hence we have \(\delta = \varepsilon\)
+
+
+\textbf{Proof}
+Given \(\varepsilon >0\), we can take \(\delta >0\) to be \(\delta = \varepsilon\) so that whenever 
+\[0 < |x-1| < \delta\]
+we have 
+\[|f(x) - 2| < \varepsilon\]
+From the first inequality, since we have \(\delta = \epsilon\), 
+\[0 < |x-1| < \varepsilon\]
+\[0 < |(x+1) - 2| < \varepsilon\]
+\[0 < \biggl|\frac{(x+1)(x-1)}{x-1}-2 \biggl|<\varepsilon\]
+We can multiply by \(\frac{x-1}{x-1}\) without affecting anything because we are not affected by the hole at \(x=1\) since we only care about values around \(x=1\) but not \(x=1\) itself. Hence we have 
+\[|f(x) - 2| < \varepsilon\]
+and the definition of the limit has been satisfied so 
+\[\lim_{x \to 1}\frac{x^2-1}{x-1} = 2\]
+\section{}
+We have
+
+\[
+f(x) = \begin{cases}
+    4-2x & \text{if } x < 1, \\
+    6x-4  & \text{if } x \ge 1.
+\end{cases}
+\]
+We can graph this function and explore each case separately
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{image.png}
+\end{figure}
+First we we approach \(x\to 1^+\), we have 
+\[|f(x)-2| < \varepsilon\]
+\[|6x-4-2| < \varepsilon\]
+\[6|x-1| < \varepsilon \implies |x-1| < \frac{\varepsilon}{6}\]
+Hence we get \(\delta = \varepsilon/6\). Then if we approach \(x\to 1^-\), we have
+\[|f(x)-2| < \varepsilon\]
+\[|(4-2x)-2| < \varepsilon\]
+\[2|x-1| < \varepsilon \implies |x-1| < \frac{\varepsilon}{2}\]
+Hence we have \(\delta = \varepsilon/2\). We want to take the more restrictive one, hence we have \(\delta = \varepsilon/6\). 
+
+
+\textbf{Proof}
+Given \(\varepsilon > 0\), we can take \(\delta > 0\) to be \(\delta = \varepsilon/6\) so that whenever
+\[0 < |x-1| < \delta\]
+We have 
+\[|f(x)-2| < \varepsilon\]
+Case 1 when \(x < 1\). Here $f(x) = 4 - 2x$. Then
+\[
+|f(x) - 2| = |(4-2x) - 2| = |2 - 2x| = 2|x-1|.
+\]
+Since $|x-1| < \delta \leq \dfrac{\varepsilon}{2}$, it follows that
+\[
+|f(x)-2| = 2|x-1| < 2 \cdot \frac{\varepsilon}{2} = \varepsilon.
+\]
+
+Case 2 when \(x \ge 1\). Here $f(x) = 6x - 4$. Then
+\[
+|f(x) - 2| = |(6x-4) - 2| = |6x - 6| = 6|x-1|.
+\]
+Since $|x-1| < \delta \leq \dfrac{\varepsilon}{6}$, it follows that
+\[
+|f(x)-2| = 6|x-1| < 6 \cdot \frac{\varepsilon}{6} = \varepsilon.
+\]
+In both cases, $0 < |x-1| < \delta \implies |f(x) - 2| < \varepsilon$. Hence the definition of the limit is satisfied.
+
+\section{}
+We want to show
+\[
+\lim_{x \to 0} x^2 \sin\frac{1}{x} = 0,
+\]
+so here $c = 0$ and $L = 0$. Our target inequality is
+\[
+|f(x) - L| = \left|x^2 \sin\frac{1}{x} - 0\right| = \left|x^2 \sin\frac{1}{x}\right|.
+\]
+For any real number $\theta$, we know $|\sin\theta| \leq 1$. Applying this with $\theta = 1/x$ (valid since $x \neq 0$ near the limit):
+\[
+\left|\sin\frac{1}{x}\right| \leq 1.
+\]
+Multiplying both sides by $x^2 \geq 0$ 
+\[
+\left|x^2 \sin\frac{1}{x}\right| = x^2\left|\sin\frac{1}{x}\right| \leq x^2 \cdot 1 = x^2.
+\]
+\[
+\left|x^2 \sin\frac{1}{x}\right| \leq x^2.
+\]
+This means if we can force $x^2$ to be less than $\varepsilon$, then $\left|x^2\sin\frac{1}{x}\right|$ is automatically less than $\varepsilon$ too, since it is squeezed underneath $x^2$. Then we have
+\[
+x^2 < \varepsilon \implies |x| < \sqrt{\varepsilon}.
+\]
+Since $|x - 0| = |x|$, this tells us how close $x$ needs to be to $0$. So we have
+\[
+\delta = \sqrt{\varepsilon}.
+\]
+
+\textbf{Proof}
+Given $\varepsilon > 0$, we can take $\delta = \sqrt{\varepsilon} > 0$ so that whenever $0 < |x - 0| < \delta$, we have
+\[
+\left|x^2 \sin\frac{1}{x} - 0\right| = x^2\left|\sin\frac{1}{x}\right|.
+\]
+Since $-1 \leq \sin\theta \leq 1$ for every real number $\theta$, and in particular for $\theta = 1/x$ (which is defined because $x \neq 0$), we know that $\left|\sin\dfrac{1}{x}\right| \leq 1$. Multiplying this inequality by the nonnegative quantity $x^2$ does not change its direction, so
+\[
+x^2\left|\sin\frac{1}{x}\right| \leq x^2 \cdot 1 = x^2.
+\]
+Next, because $0 < |x - 0| < \delta$, we have $|x| < \delta = \sqrt{\varepsilon}$, and squaring both sides of this inequality (valid since both sides are nonnegative) gives
+\[
+x^2 < \left(\sqrt{\varepsilon}\right)^2 = \varepsilon.
+\]
+Chaining these two inequalities together, we conclude that
+\[
+\left|x^2 \sin\frac{1}{x} - 0\right| = x^2\left|\sin\frac{1}{x}\right| \leq x^2 < \varepsilon.
+\]
+Therefore, whenever $0 < |x - 0| < \delta$, it follows that $\left|x^2\sin\dfrac{1}{x} - 0\right| < \varepsilon$. This fulfils the definition of the limit. 
+
+\end{document}

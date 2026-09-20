@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\title{Lesson 6 Homework - Calculus}
+\author{William Wang}
+\date{September 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+Yes. If we have 
+\[f(x) = x, \quad g(x) = |x|\]
+then  
+\[h(x) = \frac{f(x)}{g(x)} = \frac{x}{|x|}\]
+This is discontinuous at \(x=0\) because 
+\[\lim_{x\to 1^-} h(x) = -1\]
+while 
+\[\lim_{x\to1^+}h(x) = 1\]
+Since the right hand and left hand limits aren't the same, the \(h(x)\) is discontinuous on interval \([0,1]\)
+
+\section{}
+No. If we have 
+\[f(x) = \begin{cases}
+    -1 & \text{if } x \geq 0 
+    \\ 1 & \text{if } x < 0
+\end{cases}\]
+and 
+\[g(x) = \begin{cases}
+    1 & \text{if } x \geq 0
+    \\ -1 & \text{if } x < 0
+\end{cases}\]
+Then if \(h(x) = f(x) \cdot g(x)\), 
+\[h(x) = -1\]
+for all \(x\). However, \(f(x)\) and \(g(x)\) are not continuous at \(x = 0\) since 
+\[\lim_{x\to 0^-} f(x) = 1, \quad \lim_{x\to0^+}f(x) = -1\]
+which are not equal, going against the definition of continuity and 
+\[\lim_{x\to0^-} g(x) = -1, \quad \lim_{x\to0^+} g(x) = 1\]
+as well. Hence it is not true. 
+
+\section{}
+Let 
+\[g(x) = x+1\]
+and 
+\[f(x) = \begin{cases}
+    1 & \text{if } x = 1
+    \\ 0 & \text{if } x \neq 1
+\end{cases}\]
+Both of these functions are continuous at \(x= 0\) since \(f(x)\) is only discontinuous at \(x=1\). Then 
+\[(f\circ g)(x) = f(x+1) = \begin{cases}
+    1 & \text{if } x = 0
+    \\ 0 & \text{if } x \neq 0
+\end{cases}\]
+This is discontinuous at \(x = 0\) since 
+\[(f\circ g)(0) = 1\]
+which is not equal to the right and left side limits 
+\[\lim_{x\to 0^-} (f\circ g)(x) = \lim_{x\to 0^+} (f\circ g)(x) = 0\]
+which doesn't satisfy the definition of the limit. This doesn't contradict Theorem 8 since it only holds when \(f\) is continuous at \(g(x)\) which is not true since 
+\[g(x) \in (-\infty, \infty)\]
+while \(f\) is not continuous for all real numbers. 
+
+\end{document}

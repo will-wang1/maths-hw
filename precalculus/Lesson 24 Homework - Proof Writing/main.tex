@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\title{Lesson 24 Homework - Proof Writing}
+\author{William Wang}
+\date{February 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+
+Let \(P=(x,y)\). We first want to reflect over the y axis. Reflection over the \(y\)-axis becomes
+\[(x,y)\longrightarrow(-x,y).\]
+Then we want to rotate by 60 degrees counterclockwise. The rotation matrix for \(60^\circ\) is
+\[
+A =
+\begin{pmatrix}
+\cos 60^\circ & -\sin 60^\circ \\
+\sin 60^\circ & \cos 60^\circ
+\end{pmatrix}=
+\begin{pmatrix}\frac12 & -\frac{\sqrt3}{2} \\\frac{\sqrt3}{2} & \frac12\end{pmatrix}\]
+
+Applying this to \((-x,y)\):
+
+\[
+\begin{aligned}
+x' &= (-x)\frac12 - y\frac{\sqrt3}{2}
+= -\frac{x}{2} - \frac{\sqrt3}{2}y, \\
+y' &= (-x)\frac{\sqrt3}{2} + y\frac12
+= -\frac{\sqrt3}{2}x + \frac12 y.
+\end{aligned}
+\]
+
+We are given
+\[
+(x',y')=(-2-\sqrt3,\;1-2\sqrt3).
+\]
+
+So the system is
+\[
+-\frac{x}{2}-\frac{\sqrt3}{2}y=-2-\sqrt3,
+\]
+\[
+-\frac{\sqrt3}{2}x+\frac12 y=1-2\sqrt3.
+\]
+
+\[
+-x-\sqrt3 y=-4-2\sqrt3,
+\]
+\[
+-\sqrt3 x+y=2-4\sqrt3.
+\]
+\[
+y=2-4\sqrt3+\sqrt3 x.
+\]
+
+Substitute into the first:
+
+\[
+-x-\sqrt3(2-4\sqrt3+\sqrt3 x)=-4-2\sqrt3.
+\]
+
+\[
+-4x+12=-4.
+\]
+
+\[
+-4x=-16 \quad\Rightarrow\quad x=4.
+\]
+
+\[
+y=2-4\sqrt3+4\sqrt3=2.
+\]
+
+\[
+P=(4,2)
+\]
+
+\section{}
+If we think in terms of geometric rotation, then we can view \(A^2\) as a rotation by \(2\theta\) and \(A^3\) as a rotation of \(3\theta\). Which means we would have a rotation of \(4\theta\) the same as a rotation of \(\theta\). 
+\[4\theta \equiv \theta \pmod{2\theta}\]
+
+\[3\theta \equiv 0 \pmod{2\theta}\]
+\[\theta = 2\pi/3\]
+Hence the the result is the matrix for the transformation of rotating by \(2\pi/3\). 
+\[\begin{pmatrix}
+    -1/2&-\sqrt{3}/2 \\ \sqrt{3}/2&-1/2
+\end{pmatrix}\]
+
+\section{}
+We first want to find a position vector that is on the line \(y = 2x\). \(P = \langle 1,2 \rangle\). We want to find the projection of the vector towards the standard basis vectors. 
+\[\text{proj}_{\langle  1,2 \rangle}^{\langle 1,0 \rangle} = \frac{1}{5}\langle 1,2 \rangle = \langle \frac{1}{5}, \frac{2}{5} \rangle\]
+Then to get the normal vector, we want to subtract this from the standard basis vector. 
+\[\vec{n_1} = \langle 1,0\rangle - \langle 1/5, 2/5 \rangle = \langle  4/5, -2/5\rangle\]
+Then for the other standard basis vector
+\[\text{proj}_{\langle 1,2 \rangle}^{\langle 0,1 \rangle} = \frac{2}{5}\langle 1,2 \rangle = \langle \frac{2}{5}, \frac{4}{5} \rangle \]
+\[\vec{n_2} = \langle 0,1 \rangle - \rangle 2/5, 4/5\langle = \langle -2/5, 1/5 \rangle  \]
+Then we have the matrix 
+\[A = \begin{pmatrix}
+    4/5&-2/5 \\ -2/5&1/5
+\end{pmatrix}\]
+which means the transformation is 
+\[T\begin{pmatrix}
+    x \\ y
+\end{pmatrix} = \begin{pmatrix}
+    4/5&-2/5 \\ -2/5&1/5
+\end{pmatrix}\begin{pmatrix}
+    x \\ y
+\end{pmatrix}\]
+The transformation of \((4,-6)\) will be 
+\[\begin{pmatrix}
+    4/5&-2/5 \\ -2/5&1/5
+\end{pmatrix}\begin{pmatrix}
+    4 \\ -6
+\end{pmatrix} = \begin{pmatrix}
+    28/5 \\ -14/5
+\end{pmatrix}\]
+Hence 
+\[(28/5,-14/5)\]
+\end{document}

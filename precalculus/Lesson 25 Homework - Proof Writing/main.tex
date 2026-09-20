@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Lesson 25 Homework - Proof Writing}
+\author{William Wang}
+\date{March 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+\subsection{}
+For a 2x2 matrix
+\[A = \begin{pmatrix}
+    a&b \\ c&d
+\end{pmatrix}, A^T = \begin{pmatrix}
+    a&c \\ b&d
+\end{pmatrix}\]
+Then we have 
+\[\text{det}(A) = ad-bc, \text{det}(A^T) = ad-bc\]
+Hence they are still the same. 
+For a 3x3 matrix
+\[A = \begin{pmatrix}
+    a&b&c \\ d&e&f \\ g&h&i
+\end{pmatrix}, A^T = \begin{pmatrix}
+    a&d&g \\ b&e&h \\ c&f&i
+\end{pmatrix}\]
+Then we have 
+\[
+\text{det}(A) = a(ei-fh) - b(fi-fg) + c(dh-eg)\]
+and 
+\[\text{det}(A^T) = a(ei-fh)-d(hi-hc)+g(bf-eh)\]
+\subsection{}
+It should be the same. Let 
+\[A = \begin{pmatrix}
+    a&b \\ c&d
+\end{pmatrix} \implies \text{det}(A) = ad-bc \]
+\[B = \begin{pmatrix}
+    a&b+ka \\ c&d+kc
+\end{pmatrix} \implies \text{det}(B) = a(d+kc) - c(b+ka) = ad+ack - cb-ack = ad-bc = \text{det}(A)\]
+Hence 
+\[\text{det}(A) = \text{det}(B)\]
+\subsection{}
+Yes, we can draw a similar conclusion. Since \(\text{det}(A) = \text{det}(A^T)\), if the rows of \(A\) are linearly dependent, then the columns of \(A^T\) wil bbe linearly dependent, which means \(\text{det}(A^T) = 0\). Consequently \(\text{det}(A) = 0\). If the rows are linearly independent, then the determinant is non-zero
+ 
+\section{}
+Skipped. 
+\section{}
+\subsection{}
+We want a linear transformation that stretches $\mathbb{R}^2$ horizontally by a factor of $a$ and vertically by a factor of $b$. The standard basis vectors in $\mathbb{R}^2$ are \[ \mathbf{i} = \begin{pmatrix}1\\0\end{pmatrix}, \quad \mathbf{j} = \begin{pmatrix}0\\1\end{pmatrix}. \] Under the transformation: \[ \mathbf{i} \xrightarrow{} \begin{pmatrix}a\\0\end{pmatrix}, \quad \mathbf{j} \xrightarrow{} \begin{pmatrix}0\\b\end{pmatrix}. \] So the transformation matrix is \[ M = \begin{pmatrix} a & 0 \\ 0 & b \end{pmatrix}. \]
+\subsection{}
+The unit circle has equation \[ x^2 + y^2 = 1. \] Let $(u,v)$ be the coordinates after transformation: \[ \begin{pmatrix} u \\ v \end{pmatrix} = M \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} a & 0 \\ 0 & b \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} ax \\ by \end{pmatrix}. \] Solving for $x$ and $y$ in terms of $u$ and $v$: \[ x = \frac{u}{a}, \quad y = \frac{v}{b}. \] Substitute into the unit circle equation: \[ \left(\frac{u}{a}\right)^2 + \left(\frac{v}{b}\right)^2 = 1. \] This is the equation of the ellipse in $(u,v)$ coordinates: \[ \frac{u^2}{a^2} + \frac{v^2}{b^2} = 1. \]
+\subsection{}
+The area of the image of the unit circle under the linear transformation $M$ is given by \[ \text{Area} = |\det(M)| \cdot (\text{area of unit circle}). \] The determinant of $M$ is \[ \det(M) = a \cdot b = ab, \] and the area of the unit circle is $\pi$. Thus, the area of the ellipse is \[ \text{Area} = \pi \cdot ab. \]
+
+\end{document}
